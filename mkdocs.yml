@@ -1,0 +1,14 @@
+site_name: Kai Lang
+pages:
+    - The Basics: index.md
+    - Types:
+        - Basic Types: types/basic.md
+        - Structs: types/struct.md
+    - Entry Point: entry-point.md
+    - About: about.md
+extra_css:
+    - css/extra.css
+theme: material
+markdown_extensions:
+    - codehilite
+    - admonition
