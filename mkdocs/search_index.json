@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "The Basics\n\n\nKai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way.\n\n\nGetting Started\n\n\nAs per tradition, let's start with a hello world application.\n\n\nprint\n(\nHello, world!\n)\n\n\n\n\n\n\n\n\nWarning\n\n\nStatements in global scope are temporarily disabled. As global scope is limited to declarations, please define a \nmain\n procedure.", 
+            "text": "The Basics\n\n\nKai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way.\n\n\nGetting Started\n\n\nAs per tradition, let's start with a hello world application.\n\n\nprint\n(\nHello, world!\n)\n\n\n\n\n\n\n\n\nWarning\n\n\nStatements in global scope are temporarily disabled. As global scope is limited to declarations, please define a \nmain\n procedure.\n\n\n\n\nSimple Declarations\n\n\nmyInt\n \n:=\n \n15\n\n\nmyIntCopy\n \n:=\n \nmyInt\n\n\n\n\n\n\nmyString\n \n:=\n \n\ud83d\udc4b\n\n\n\ud83d\udd12\n \n:=\n \ntrue", 
             "title": "The Basics"
         }, 
         {
@@ -16,6 +16,11 @@
             "title": "Getting Started"
         }, 
         {
+            "location": "/#simple-declarations", 
+            "text": "myInt   :=   15  myIntCopy   :=   myInt   myString   :=   \ud83d\udc4b  \ud83d\udd12   :=   true", 
+            "title": "Simple Declarations"
+        }, 
+        {
             "location": "/types/basic/", 
             "text": "Basic Types", 
             "title": "Basic Types"
@@ -24,6 +29,26 @@
             "location": "/types/basic/#basic-types", 
             "text": "", 
             "title": "Basic Types"
+        }, 
+        {
+            "location": "/types/array/", 
+            "text": "", 
+            "title": "Arrays"
+        }, 
+        {
+            "location": "/types/pointer/", 
+            "text": "", 
+            "title": "Pointers"
+        }, 
+        {
+            "location": "/types/enumeration/", 
+            "text": "", 
+            "title": "Enumerations"
+        }, 
+        {
+            "location": "/types/union/", 
+            "text": "", 
+            "title": "Unions"
         }, 
         {
             "location": "/types/struct/", 
@@ -36,39 +61,34 @@
             "title": "Structs"
         }, 
         {
-            "location": "/entry-point/", 
+            "location": "/operator/", 
             "text": "", 
+            "title": "Operators"
+        }, 
+        {
+            "location": "/control-flow/", 
+            "text": "", 
+            "title": "Control Flow"
+        }, 
+        {
+            "location": "/procedure/", 
+            "text": "", 
+            "title": "Procedures"
+        }, 
+        {
+            "location": "/module/", 
+            "text": "", 
+            "title": "Import and Modules"
+        }, 
+        {
+            "location": "/entry-point/", 
+            "text": "The application entry point\n\n\nmain\n \n::\n \n()\n \n-\n \nvoid\n \n{\n\n    \nprint\n(\nHello, world!\n)\n\n\n}", 
             "title": "Entry Point"
         }, 
         {
-            "location": "/about/", 
-            "text": "Malis si portas magna et ceu at\n\n\nVoco ceu superabat in agebatur\n\n\nLorem markdownum croceo fraxineam motu Io sublimis, in dum resedit, non modo\nfama conpellat obruit fuit. Loqui fera adverso aera \ntotum\n captum, tam talis,\ndecimum, caelo utque in. Nuda sinus, Argolicas habitus tecta. Epops induruit,\naut, liber Orci stirpes titulos cognita suis concrescere loqui, intercepta. Quam\nni domus, nunc et illam veniam obliquis iamque.\n\n\nAd flammae fictumque animo silvas, per negant, caligine miserorum terrae caeli:\nspectat ferro: \npennas ex\n. Intravit quaeris cupies additur. Non altum\nsquamosos nondum \nsollerti\n.\n\n\nSublime amori\n\n\nContendisse increpuit regnat plectrumque lata quondam. Abluit quos inpia quisque\nviro circumdata vidi quandocumque victa, aut. Virgas furta Acheloe, non Aenean\net harenae capillis \nsolet cantatas quodque\n sine armis e tellus secuta.\n\n\nAlbet Messapiaque manifesta inponit \npostquam malis\n mortalibus, venit; non\nvelo! Erubui hic germanaeque Caune et curvamine hostisque, agreste incrementa.\nSed pectore pressum insequitur nova: cani \nflavam\nTroia\n, est nostri placuere et feracis spectant\ncalido, vetusto!\n\n\nIncessus creatus\n\n\nTeste Celadon te aequor, \nexiguis Denique\n nuper tibi, modo regione. Mea longo\ndummodo est terras ad manibus verbis \nictu\n meminere \nmagna nec\n.\n\n\n\n\nSuperator opem, agresti inmitibus tellus comas illi Achivos sed mallem. Cultus\nadversaque, ventis remigioque nocebant facta pepercit amplexus tremore. Cornua\n\nse minor\n quantam: qua meae, aquas Adoni colorque validoque leti, relinquit.\nEst Quirino firmat, es alimenta petit est: paenitet tepidique redditur iam\nvictus, qui poteras ferunt; in. Fata \nper\n non urit\nfaciemque colunt citius.\n\n\n\n\nPoterat faciemque summa coronant in caduca ferrum\n\n\nSuo vacent iuvencae Dorceus mollibat insuper anum potentia cineres; adpellatque\nvoti hiems, coronae plenas montis ignes, circumfunditur. Pervia via curru\nprofanis sidereis et saltus si Minos: fibula Tantalides alumnae iuvenis. Sensit\nremissis \nmeque\n; celeremque cepere longum \nmentis undis\n. Fremit caelum causa,\nhinc ilia cum parentis adspicias ex.\n\n\noptical_desktop.oopChecksum(active_ugc(wave),\n        metalSerialTeraflops.coreCross(icon(device), andManagementLan), 3);\nspyware_and_operation(firmware, mebibyteExifBookmark(vciRfid, -3));\neSocial.cms_name(4 + thread_bar);\nqwerty = default_ip(\n        contextual.nvramScreenshotVolume.multiprocessingInternet(\n        usernameInternal + 5, 4, up_case_server));\n\n\n\n\n\nTenuisse membra vultusque; miser crevit munere modo, est. Est dant oculos\nThessalus telis protinus lucemque nondum? Des per florem meumque, \nsuggerit\na\n animam.", 
-            "title": "About"
-        }, 
-        {
-            "location": "/about/#malis-si-portas-magna-et-ceu-at", 
-            "text": "", 
-            "title": "Malis si portas magna et ceu at"
-        }, 
-        {
-            "location": "/about/#voco-ceu-superabat-in-agebatur", 
-            "text": "Lorem markdownum croceo fraxineam motu Io sublimis, in dum resedit, non modo\nfama conpellat obruit fuit. Loqui fera adverso aera  totum  captum, tam talis,\ndecimum, caelo utque in. Nuda sinus, Argolicas habitus tecta. Epops induruit,\naut, liber Orci stirpes titulos cognita suis concrescere loqui, intercepta. Quam\nni domus, nunc et illam veniam obliquis iamque.  Ad flammae fictumque animo silvas, per negant, caligine miserorum terrae caeli:\nspectat ferro:  pennas ex . Intravit quaeris cupies additur. Non altum\nsquamosos nondum  sollerti .", 
-            "title": "Voco ceu superabat in agebatur"
-        }, 
-        {
-            "location": "/about/#sublime-amori", 
-            "text": "Contendisse increpuit regnat plectrumque lata quondam. Abluit quos inpia quisque\nviro circumdata vidi quandocumque victa, aut. Virgas furta Acheloe, non Aenean\net harenae capillis  solet cantatas quodque  sine armis e tellus secuta.  Albet Messapiaque manifesta inponit  postquam malis  mortalibus, venit; non\nvelo! Erubui hic germanaeque Caune et curvamine hostisque, agreste incrementa.\nSed pectore pressum insequitur nova: cani  flavam\nTroia , est nostri placuere et feracis spectant\ncalido, vetusto!", 
-            "title": "Sublime amori"
-        }, 
-        {
-            "location": "/about/#incessus-creatus", 
-            "text": "Teste Celadon te aequor,  exiguis Denique  nuper tibi, modo regione. Mea longo\ndummodo est terras ad manibus verbis  ictu  meminere  magna nec .   Superator opem, agresti inmitibus tellus comas illi Achivos sed mallem. Cultus\nadversaque, ventis remigioque nocebant facta pepercit amplexus tremore. Cornua se minor  quantam: qua meae, aquas Adoni colorque validoque leti, relinquit.\nEst Quirino firmat, es alimenta petit est: paenitet tepidique redditur iam\nvictus, qui poteras ferunt; in. Fata  per  non urit\nfaciemque colunt citius.", 
-            "title": "Incessus creatus"
-        }, 
-        {
-            "location": "/about/#poterat-faciemque-summa-coronant-in-caduca-ferrum", 
-            "text": "Suo vacent iuvencae Dorceus mollibat insuper anum potentia cineres; adpellatque\nvoti hiems, coronae plenas montis ignes, circumfunditur. Pervia via curru\nprofanis sidereis et saltus si Minos: fibula Tantalides alumnae iuvenis. Sensit\nremissis  meque ; celeremque cepere longum  mentis undis . Fremit caelum causa,\nhinc ilia cum parentis adspicias ex.  optical_desktop.oopChecksum(active_ugc(wave),\n        metalSerialTeraflops.coreCross(icon(device), andManagementLan), 3);\nspyware_and_operation(firmware, mebibyteExifBookmark(vciRfid, -3));\neSocial.cms_name(4 + thread_bar);\nqwerty = default_ip(\n        contextual.nvramScreenshotVolume.multiprocessingInternet(\n        usernameInternal + 5, 4, up_case_server));  Tenuisse membra vultusque; miser crevit munere modo, est. Est dant oculos\nThessalus telis protinus lucemque nondum? Des per florem meumque,  suggerit\na  animam.", 
-            "title": "Poterat faciemque summa coronant in caduca ferrum"
+            "location": "/entry-point/#the-application-entry-point", 
+            "text": "main   ::   ()   -   void   { \n     print ( Hello, world! )  }", 
+            "title": "The application entry point"
         }
     ]
 }

@@ -18,6 +18,30 @@
     </url>
         
     <url>
+     <loc>/types/array/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/types/pointer/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/types/enumeration/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/types/union/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/types/struct/</loc>
      <lastmod>2017-03-19</lastmod>
      <changefreq>daily</changefreq>
@@ -27,7 +51,7 @@
 
     
     <url>
-     <loc>/entry-point/</loc>
+     <loc>/operator/</loc>
      <lastmod>2017-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -35,7 +59,31 @@
 
     
     <url>
-     <loc>/about/</loc>
+     <loc>/control-flow/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/procedure/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/module/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/entry-point/</loc>
      <lastmod>2017-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
