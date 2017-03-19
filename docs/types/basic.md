@@ -22,6 +22,13 @@ pi: float = 3.14
 tau: f64 = 6.28
 ```
 
+## Boolean
+
+```swift
+hasValue := true
+doesNotHaveValue := false
+```
+
 ## Strings
 
 ```swift
@@ -29,7 +36,7 @@ name: string = "John"
 ```
 
 ## Unconstrained Types
-```swift
+```swift hl_lines="6 10"
 myproc :: (anI32: i32) -> Void {
 	// ...
 }

@@ -21,7 +21,7 @@ extra_css:
     - css/extra.css
 theme: material
 markdown_extensions:
-    - codehilite
+    - codehilite(linenums=true)
     - admonition
 repo_url: https://github.com/kai-language/docs
 repo_name: Kai-Lang

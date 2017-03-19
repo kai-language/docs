@@ -23,7 +23,7 @@ print(myCareer == herCareer) // false
 
 ## Associated Values
 
-```swift
+```swift hl_lines="3"
 hisCareer: Career = .engineer(field: "Civil")
 if hisCareer = .engineer {
 	print(hisCareer.field) // Civil
