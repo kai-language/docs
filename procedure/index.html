@@ -285,8 +285,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../types/struct/" title="Structs" class="md-nav__link">
-      Structs
+    <a href="../types/struct/" title="Structures" class="md-nav__link">
+      Structures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/type-def/" title="Type Definition" class="md-nav__link">
+      Type Definition
     </a>
   </li>
 
@@ -357,8 +369,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../compile-time/" title="Compile Time Execution" class="md-nav__link">
+      Compile Time Execution
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../entry-point/" title="Entry Point" class="md-nav__link">
       Entry Point
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../c/" title="Working with C" class="md-nav__link">
+      Working with C
     </a>
   </li>
 
@@ -391,7 +427,25 @@
                 
                   <h1>Procedures</h1>
                 
-                
+                <div class="codehilite"><pre><span></span><span class="n">sum</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">i32</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">mul</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">sumAndMul</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span><span class="p">,</span> <span class="n">i32</span> <span class="p">{</span>
+    <span class="n">sum</span> <span class="p">:=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="n">prod</span> <span class="p">:=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+
+    <span class="k">return</span> <span class="n">sum</span><span class="p">,</span> <span class="n">prod</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 

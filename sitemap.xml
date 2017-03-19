@@ -55,6 +55,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/types/type-def/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
@@ -91,7 +97,23 @@
 
     
     <url>
+     <loc>/compile-time/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>/entry-point/</loc>
+     <lastmod>2017-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/c/</loc>
      <lastmod>2017-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>

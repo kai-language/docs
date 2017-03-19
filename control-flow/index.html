@@ -285,8 +285,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../types/struct/" title="Structs" class="md-nav__link">
-      Structs
+    <a href="../types/struct/" title="Structures" class="md-nav__link">
+      Structures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/type-def/" title="Type Definition" class="md-nav__link">
+      Type Definition
     </a>
   </li>
 
@@ -320,9 +332,62 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Control Flow
+      </label>
+    
     <a href="./" title="Control Flow" class="md-nav__link md-nav__link--active">
       Control Flow
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#if-statement" title="If Statement" class="md-nav__link">
+    If Statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-loop" title="For Loop" class="md-nav__link">
+    For Loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while-loop" title="While Loop" class="md-nav__link">
+    While Loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switch-statement" title="Switch Statement" class="md-nav__link">
+    Switch Statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-statement" title="Return Statement" class="md-nav__link">
+    Return Statement
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -357,8 +422,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../compile-time/" title="Compile Time Execution" class="md-nav__link">
+      Compile Time Execution
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../entry-point/" title="Entry Point" class="md-nav__link">
       Entry Point
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../c/" title="Working with C" class="md-nav__link">
+      Working with C
     </a>
   </li>
 
@@ -378,6 +467,48 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#if-statement" title="If Statement" class="md-nav__link">
+    If Statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-loop" title="For Loop" class="md-nav__link">
+    For Loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while-loop" title="While Loop" class="md-nav__link">
+    While Loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switch-statement" title="Switch Statement" class="md-nav__link">
+    Switch Statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-statement" title="Return Statement" class="md-nav__link">
+    Return Statement
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -391,7 +522,66 @@
                 
                   <h1>Control Flow</h1>
                 
-                
+                <h2 id="if-statement">If Statement</h2>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kc">true</span> <span class="p">==</span> <span class="mi">1</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kc">false</span> <span class="p">{</span>
+    <span class="c1">// won&#39;t be executed</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="for-loop">For Loop</h2>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
+    <span class="c1">// ... runs 10 times</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">child</span> <span class="k">in</span> <span class="n">children</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Learn more about <code>Arrays</code> <a href="../types/array/">here</a>.</p>
+</div>
+<h2 id="while-loop">While Loop</h2>
+<div class="codehilite"><pre><span></span><span class="k">while</span> <span class="kc">true</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="switch-statement">Switch Statement</h2>
+<div class="codehilite"><pre><span></span><span class="k">switch</span> <span class="n">gender</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="p">.</span><span class="n">male</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="k">case</span> <span class="p">.</span><span class="n">female</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="k">default</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Learn more about <code>Enumerations</code> <a href="../types/enumeration/">here</a>.</p>
+</div>
+<h2 id="return-statement">Return Statement</h2>
+<div class="codehilite"><pre><span></span><span class="k">return</span> <span class="mi">0</span>
+</pre></div>
                 
                   
                 

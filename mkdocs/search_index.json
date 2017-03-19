@@ -7,7 +7,7 @@
         }, 
         {
             "location": "/", 
-            "text": "The Basics\n\n\nKai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here, \nInstall Kai\n to get started!\n\n\nGetting Started\n\n\nAs per tradition, let's start with a hello world application.\n\n\nprint\n(\nHello, world!\n)\n\n\n\n\n\n\n\n\nWarning\n\n\nStatements in global scope are temporarily disabled. As global scope is limited to declarations, please define a \nmain\n procedure.\n\n\n\n\nSimple Declarations\n\n\nmyInt\n \n:=\n \n15\n\n\nmyIntCopy\n \n:=\n \nmyInt\n\n\n\n\n\n\nmyString\n \n:=\n \n\ud83d\udc4b\n\n\n\ud83d\udd12\n \n:=\n \ntrue", 
+            "text": "The Basics\n\n\nKai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here, \nInstall Kai\n to get started!\n\n\nGetting Started\n\n\nAs per tradition, let's start with a hello world application.\n\n\nprint\n(\nHello, world!\n)\n\n\n\n\n\n\n\n\nWarning\n\n\nStatements in global scope are temporarily disabled. As global scope is limited to declarations, please define a \nmain\n procedure.\n\n\n\n\nSimple Declarations\n\n\nmyInt\n \n:=\n \n15\n\n\nmyIntCopy\n \n:=\n \nmyInt\n\n\n\n\n\n\nmyString\n \n:=\n \n\ud83d\udc4b\n\n\n\ud83d\udd12\n \n:=\n \ntrue\n\n\n\n\n\n\nType Annotation\n\n\nx\n:\n \nint\n \n=\n \n5\n\n\n\n\n\n\n\n\nNote\n\n\nContinue \nhere\n to learn more about Kai types.\n\n\n\n\nCompile-Time Type Annotation\n\n\nage\n:\n \nint\n \n:\n \n32\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nCompile Time Execution\n \nhere\n.", 
             "title": "The Basics"
         }, 
         {
@@ -26,8 +26,18 @@
             "title": "Simple Declarations"
         }, 
         {
+            "location": "/#type-annotation", 
+            "text": "x :   int   =   5    Note  Continue  here  to learn more about Kai types.", 
+            "title": "Type Annotation"
+        }, 
+        {
+            "location": "/#compile-time-type-annotation", 
+            "text": "age :   int   :   32    Note  Learn more about  Compile Time Execution   here .", 
+            "title": "Compile-Time Type Annotation"
+        }, 
+        {
             "location": "/types/basic/", 
-            "text": "Basic Types", 
+            "text": "Basic Types\n\n\nIntegers\n\n\nx\n:\n \nint\n \n=\n \n5\n\n\n\n\n\n\nx\n:\n \nint\n \n5\n\n\ny\n:\n \ni64\n \n=\n \nx\n\n\n\n\n\n\nz\n:\n \ni8\n \n=\n \n0\n\n\n\n\n\n\nReals\n\n\npi\n:\n \nfloat\n \n=\n \n3.14\n\n\ntau\n:\n \nf64\n \n=\n \n6.28\n\n\n\n\n\n\nStrings\n\n\nname\n:\n \nstring\n \n=\n \nJohn\n\n\n\n\n\n\nUnconstrained Types\n\n\nmyproc\n \n::\n \n(\nanI32\n:\n \ni32\n)\n \n-\n \nVoid\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n// could be any integer type and will default to i64 if not constrained.\n\n\nunconstValue\n \n:=\n \n5\n\n\n\n\n// calling this procedure constrains the value to type i32.\n\n\nmyproc\n(\nanI32\n:\n \nunconstValue\n)", 
             "title": "Basic Types"
         }, 
         {
@@ -36,8 +46,28 @@
             "title": "Basic Types"
         }, 
         {
+            "location": "/types/basic/#integers", 
+            "text": "x :   int   =   5   x :   int   5  y :   i64   =   x   z :   i8   =   0", 
+            "title": "Integers"
+        }, 
+        {
+            "location": "/types/basic/#reals", 
+            "text": "pi :   float   =   3.14  tau :   f64   =   6.28", 
+            "title": "Reals"
+        }, 
+        {
+            "location": "/types/basic/#strings", 
+            "text": "name :   string   =   John", 
+            "title": "Strings"
+        }, 
+        {
+            "location": "/types/basic/#unconstrained-types", 
+            "text": "myproc   ::   ( anI32 :   i32 )   -   Void   { \n     // ...  }  // could be any integer type and will default to i64 if not constrained.  unconstValue   :=   5  // calling this procedure constrains the value to type i32.  myproc ( anI32 :   unconstValue )", 
+            "title": "Unconstrained Types"
+        }, 
+        {
             "location": "/types/array/", 
-            "text": "", 
+            "text": "names\n \n:=\n \n{\n \nTim\n,\n \nS\u00f8ren\n,\n \nJane\n \n}\n\n\nnamesCopy\n \n:\n \n[]\nstring\n \n=\n \nnames\n\n\n\n\n\n\nprint\n(\nnames\n.\nlength\n)\n \n// 3\n\n\nprint\n(\nnames\n[\n0\n])\n \n// \nTim", 
             "title": "Arrays"
         }, 
         {
@@ -47,23 +77,78 @@
         }, 
         {
             "location": "/types/enumeration/", 
-            "text": "", 
+            "text": "Declaration\n\n\nDirection\n \n::\n \nenum\n \n{\n\n    \ncase\n \nup\n\n    \ncase\n \ndown\n\n    \ncase\n \nleft\n\n    \ncase\n \nright\n\n\n}\n\n\n\n\n\n\nVariable Declaration\n\n\ndirection\n:\n \nDirection\n \n=\n \n.\nup\n\n\n\n\n\n\nControl Flow\n\n\ndirection\n:\n \nDirection\n \n=\n \n.\ndown\n\n\n\nswitch\n \ndirection\n \n{\n\n\ncase\n \n.\nup\n\n    \nprint\n(\nup\n)\n\n\n\ncase\n \n.\ndown\n\n    \nprint\n(\ndown\n)\n\n\n\ncase\n \n.\nleft\n\n    \nprint\n(\nleft\n)\n\n\n\ncase\n \n.\nright\n\n    \nprint\n(\nright\n)\n\n\n}\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nControl Flow\n \nhere\n.", 
             "title": "Enumerations"
         }, 
         {
+            "location": "/types/enumeration/#declaration", 
+            "text": "Direction   ::   enum   { \n     case   up \n     case   down \n     case   left \n     case   right  }", 
+            "title": "Declaration"
+        }, 
+        {
+            "location": "/types/enumeration/#variable-declaration", 
+            "text": "direction :   Direction   =   . up", 
+            "title": "Variable Declaration"
+        }, 
+        {
+            "location": "/types/enumeration/#control-flow", 
+            "text": "direction :   Direction   =   . down  switch   direction   {  case   . up \n     print ( up )  case   . down \n     print ( down )  case   . left \n     print ( left )  case   . right \n     print ( right )  }    Note  Learn more about  Control Flow   here .", 
+            "title": "Control Flow"
+        }, 
+        {
             "location": "/types/union/", 
-            "text": "", 
+            "text": "Declaration\n\n\nCareer\n \n::\n \nunion\n \n{\n\n    \ncase\n \nengineer\n(\nfield\n:\n \nstring\n)\n\n    \ncase\n \naccountant\n(\nfield\n:\n \nstring\n,\n \nfavouriteNumber\n:\n \nf64\n)\n\n    \ncase\n \nnone\n\n\n}\n\n\n\n\n\n\nVariable Declaration\n\n\nmyCareer\n:\n \nCareer\n \n=\n \n.\nengineer\n(\nfield\n:\n \nSoftware\n)\n\n\n\n\n\n\nComparison\n\n\nmyCareer\n:\n \nCareer\n \n=\n \n.\nengineer\n(\nfield\n:\n \nSoftware\n)\n\n\nherCareer\n:\n \nCareer\n \n=\n \n.\naccountant\n(\nfield\n:\n \nGeneral\n,\n \nfavouriteNumber\n:\n \n3.14\n)\n\n\n\nprint\n(\nmyCareer\n \n==\n \nherCareer\n)\n \n// false\n\n\n\n\n\n\nAssociated Values\n\n\nhisCareer\n:\n \nCareer\n \n=\n \n.\nengineer\n(\nfield\n:\n \nCivil\n)\n\n\nif\n \nhisCareer\n \n=\n \n.\nengineer\n \n{\n\n    \nprint\n(\nhisCareer\n.\nfield\n)\n \n// Civil\n\n\n}", 
             "title": "Unions"
         }, 
         {
+            "location": "/types/union/#declaration", 
+            "text": "Career   ::   union   { \n     case   engineer ( field :   string ) \n     case   accountant ( field :   string ,   favouriteNumber :   f64 ) \n     case   none  }", 
+            "title": "Declaration"
+        }, 
+        {
+            "location": "/types/union/#variable-declaration", 
+            "text": "myCareer :   Career   =   . engineer ( field :   Software )", 
+            "title": "Variable Declaration"
+        }, 
+        {
+            "location": "/types/union/#comparison", 
+            "text": "myCareer :   Career   =   . engineer ( field :   Software )  herCareer :   Career   =   . accountant ( field :   General ,   favouriteNumber :   3.14 )  print ( myCareer   ==   herCareer )   // false", 
+            "title": "Comparison"
+        }, 
+        {
+            "location": "/types/union/#associated-values", 
+            "text": "hisCareer :   Career   =   . engineer ( field :   Civil )  if   hisCareer   =   . engineer   { \n     print ( hisCareer . field )   // Civil  }", 
+            "title": "Associated Values"
+        }, 
+        {
             "location": "/types/struct/", 
-            "text": "Structs", 
-            "title": "Structs"
+            "text": "Structs\n\n\nDeclaration\n\n\nPerson\n \n::\n \nstruct\n \n{\n\n    \nname\n:\n \nstring\n\n    \nage\n:\n \ni8\n\n\n}\n\n\n\n\n\n\nInitialisation\n\n\nme\n:\n \nPerson\n \n=\n \n{\n\n    \nname\n \n=\n \nGlenn\n,\n\n    \nage\n \n=\n \n30\n\n\n}\n\n\n\n\n\n\nDefault Values\n\n\nCar\n \n::\n \nstruct\n \n{\n\n    \nmodel\n:\n \nstring\n\n    \nmaker\n:\n \nstring\n\n    \nwheels\n:\n \ni8\n \n=\n \n4\n\n\n}\n\n\n\nmodelS\n:\n \nCar\n \n=\n \n{\n\n    \nmodel\n \n=\n \nModel S\n\n    \nmaker\n \n=\n \nTesla\n\n\n}", 
+            "title": "Structures"
         }, 
         {
             "location": "/types/struct/#structs", 
             "text": "", 
             "title": "Structs"
+        }, 
+        {
+            "location": "/types/struct/#declaration", 
+            "text": "Person   ::   struct   { \n     name :   string \n     age :   i8  }", 
+            "title": "Declaration"
+        }, 
+        {
+            "location": "/types/struct/#initialisation", 
+            "text": "me :   Person   =   { \n     name   =   Glenn , \n     age   =   30  }", 
+            "title": "Initialisation"
+        }, 
+        {
+            "location": "/types/struct/#default-values", 
+            "text": "Car   ::   struct   { \n     model :   string \n     maker :   string \n     wheels :   i8   =   4  }  modelS :   Car   =   { \n     model   =   Model S \n     maker   =   Tesla  }", 
+            "title": "Default Values"
+        }, 
+        {
+            "location": "/types/type-def/", 
+            "text": "Int64\n \n::\n \ni64\n\n\nLong\n \n::\n \nInt64\n\n\n\n\n\n\nInt\n \n::\n \n#\nforeign\n(\nLLVM\n)\n \ni64", 
+            "title": "Type Definition"
         }, 
         {
             "location": "/operator/", 
@@ -72,18 +157,73 @@
         }, 
         {
             "location": "/control-flow/", 
-            "text": "", 
+            "text": "If Statement\n\n\nif\n \ntrue\n \n==\n \n1\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\nif\n \nfalse\n \n{\n\n    \n// won\nt be executed\n\n\n}\n \nelse\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\nFor Loop\n\n\nfor\n \ni\n=\n0\n;\n \ni\n \n \n10\n;\n \ni\n++\n \n{\n\n    \n// ... runs 10 times\n\n\n}\n\n\n\n\n\n\nfor\n \nchild\n \nin\n \nchildren\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nArrays\n \nhere\n.\n\n\n\n\nWhile Loop\n\n\nwhile\n \ntrue\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\nSwitch Statement\n\n\nswitch\n \ngender\n \n{\n\n    \ncase\n \n.\nmale\n:\n\n        \nbreak\n\n\n    \ncase\n \n.\nfemale\n:\n\n        \nbreak\n\n\n    \ndefault\n:\n\n        \nbreak\n\n\n}\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nEnumerations\n \nhere\n.\n\n\n\n\nReturn Statement\n\n\nreturn\n \n0", 
             "title": "Control Flow"
         }, 
         {
+            "location": "/control-flow/#if-statement", 
+            "text": "if   true   ==   1   { \n     // ...  }   if   false   { \n     // won t be executed  }   else   { \n     // ...  }", 
+            "title": "If Statement"
+        }, 
+        {
+            "location": "/control-flow/#for-loop", 
+            "text": "for   i = 0 ;   i     10 ;   i ++   { \n     // ... runs 10 times  }   for   child   in   children   { \n     // ...  }    Note  Learn more about  Arrays   here .", 
+            "title": "For Loop"
+        }, 
+        {
+            "location": "/control-flow/#while-loop", 
+            "text": "while   true   { \n     // ...  }", 
+            "title": "While Loop"
+        }, 
+        {
+            "location": "/control-flow/#switch-statement", 
+            "text": "switch   gender   { \n     case   . male : \n         break \n\n     case   . female : \n         break \n\n     default : \n         break  }    Note  Learn more about  Enumerations   here .", 
+            "title": "Switch Statement"
+        }, 
+        {
+            "location": "/control-flow/#return-statement", 
+            "text": "return   0", 
+            "title": "Return Statement"
+        }, 
+        {
             "location": "/procedure/", 
-            "text": "", 
+            "text": "sum\n \n::\n \n(\na\n:\n \ni32\n,\n \nb\n:\n \ni32\n)\n \n-\n \ni32\n \n{\n\n    \nreturn\n \na\n \n+\n \nb\n\n\n}\n\n\n\n\n\n\nmul\n \n::\n \n(\na\n,\n \nb\n:\n \ni32\n)\n \n-\n \ni32\n \n{\n\n    \nreturn\n \na\n \n*\n \nb\n\n\n}\n\n\n\n\n\n\nsumAndMul\n \n::\n \n(\na\n,\n \nb\n:\n \ni32\n)\n \n-\n \ni32\n,\n \ni32\n \n{\n\n    \nsum\n \n:=\n \na\n \n+\n \nb\n\n    \nprod\n \n:=\n \na\n \n*\n \nb\n\n\n    \nreturn\n \nsum\n,\n \nprod\n\n\n}", 
             "title": "Procedures"
         }, 
         {
             "location": "/module/", 
-            "text": "", 
+            "text": "Import a File\n\n\n#\nimport\n \nanother_file\n\n\n\n\n\n\nImport from Git\n\n\n// github\n\n\n#\nimport\n \ngit\n(\nauthor/repo\n)\n\n\n\n// external\n\n\n#\nimport\n \ngit\n(\nhttps://external.com/author/repo\n)\n\n\n\n\n\n\nAlias an Import\n\n\n#\nimport\n \nmath\n \nas\n \nmathy\n\n\nprint\n(\nmathy\n.\npi\n)\n\n\n\n\n\n\nImport a C Header\n\n\n#\nimport\n \nstdio.h\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nWorking with C\n \nhere\n.\n\n\n\n\nPre-Compiled Library\n\n\n// include and link against glibc\n\n\n#\nlibrary\n \nglibc\n \n/path/to/umbrella.h", 
             "title": "Import and Modules"
+        }, 
+        {
+            "location": "/module/#import-a-file", 
+            "text": "# import   another_file", 
+            "title": "Import a File"
+        }, 
+        {
+            "location": "/module/#import-from-git", 
+            "text": "// github  # import   git ( author/repo )  // external  # import   git ( https://external.com/author/repo )", 
+            "title": "Import from Git"
+        }, 
+        {
+            "location": "/module/#alias-an-import", 
+            "text": "# import   math   as   mathy  print ( mathy . pi )", 
+            "title": "Alias an Import"
+        }, 
+        {
+            "location": "/module/#import-a-c-header", 
+            "text": "# import   stdio.h    Note  Learn more about  Working with C   here .", 
+            "title": "Import a C Header"
+        }, 
+        {
+            "location": "/module/#pre-compiled-library", 
+            "text": "// include and link against glibc  # library   glibc   /path/to/umbrella.h", 
+            "title": "Pre-Compiled Library"
+        }, 
+        {
+            "location": "/compile-time/", 
+            "text": "", 
+            "title": "Compile Time Execution"
         }, 
         {
             "location": "/entry-point/", 
@@ -94,6 +234,11 @@
             "location": "/entry-point/#the-application-entry-point", 
             "text": "main   ::   ()   -   void   { \n     print ( Hello, world! )  }", 
             "title": "The application entry point"
+        }, 
+        {
+            "location": "/c/", 
+            "text": "", 
+            "title": "Working with C"
         }
     ]
 }

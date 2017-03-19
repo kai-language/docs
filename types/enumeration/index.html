@@ -273,9 +273,48 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Enumerations
+      </label>
+    
     <a href="./" title="Enumerations" class="md-nav__link md-nav__link--active">
       Enumerations
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" title="Declaration" class="md-nav__link">
+    Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-declaration" title="Variable Declaration" class="md-nav__link">
+    Variable Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-flow" title="Control Flow" class="md-nav__link">
+    Control Flow
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -298,8 +337,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../struct/" title="Structs" class="md-nav__link">
-      Structs
+    <a href="../struct/" title="Structures" class="md-nav__link">
+      Structures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../type-def/" title="Type Definition" class="md-nav__link">
+      Type Definition
     </a>
   </li>
 
@@ -363,8 +414,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../compile-time/" title="Compile Time Execution" class="md-nav__link">
+      Compile Time Execution
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../../entry-point/" title="Entry Point" class="md-nav__link">
       Entry Point
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../c/" title="Working with C" class="md-nav__link">
+      Working with C
     </a>
   </li>
 
@@ -384,6 +459,34 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" title="Declaration" class="md-nav__link">
+    Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-declaration" title="Variable Declaration" class="md-nav__link">
+    Variable Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-flow" title="Control Flow" class="md-nav__link">
+    Control Flow
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -397,7 +500,44 @@
                 
                   <h1>Enumerations</h1>
                 
-                
+                <h2 id="declaration">Declaration</h2>
+<div class="codehilite"><pre><span></span><span class="n">Direction</span> <span class="p">::</span> <span class="kd">enum</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">up</span>
+    <span class="k">case</span> <span class="n">down</span>
+    <span class="k">case</span> <span class="kr">left</span>
+    <span class="k">case</span> <span class="kr">right</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="variable-declaration">Variable Declaration</h2>
+<div class="codehilite"><pre><span></span><span class="n">direction</span><span class="p">:</span> <span class="n">Direction</span> <span class="p">=</span> <span class="p">.</span><span class="n">up</span>
+</pre></div>
+
+
+<h2 id="control-flow">Control Flow</h2>
+<div class="codehilite"><pre><span></span><span class="n">direction</span><span class="p">:</span> <span class="n">Direction</span> <span class="p">=</span> <span class="p">.</span><span class="n">down</span>
+
+<span class="k">switch</span> <span class="n">direction</span> <span class="p">{</span>
+<span class="k">case</span> <span class="p">.</span><span class="n">up</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;up&quot;</span><span class="p">)</span>
+
+<span class="k">case</span> <span class="p">.</span><span class="n">down</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;down&quot;</span><span class="p">)</span>
+
+<span class="k">case</span> <span class="p">.</span><span class="kr">left</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;left&quot;</span><span class="p">)</span>
+
+<span class="k">case</span> <span class="p">.</span><span class="kr">right</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;right&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Learn more about <code>Control Flow</code> <a href="../../control-flow/">here</a>.</p>
+</div>
                 
                   
                 

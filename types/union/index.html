@@ -285,9 +285,55 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Unions
+      </label>
+    
     <a href="./" title="Unions" class="md-nav__link md-nav__link--active">
       Unions
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" title="Declaration" class="md-nav__link">
+    Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-declaration" title="Variable Declaration" class="md-nav__link">
+    Variable Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" title="Comparison" class="md-nav__link">
+    Comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#associated-values" title="Associated Values" class="md-nav__link">
+    Associated Values
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -298,8 +344,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../struct/" title="Structs" class="md-nav__link">
-      Structs
+    <a href="../struct/" title="Structures" class="md-nav__link">
+      Structures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../type-def/" title="Type Definition" class="md-nav__link">
+      Type Definition
     </a>
   </li>
 
@@ -363,8 +421,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../compile-time/" title="Compile Time Execution" class="md-nav__link">
+      Compile Time Execution
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../../entry-point/" title="Entry Point" class="md-nav__link">
       Entry Point
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../c/" title="Working with C" class="md-nav__link">
+      Working with C
     </a>
   </li>
 
@@ -384,6 +466,41 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" title="Declaration" class="md-nav__link">
+    Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-declaration" title="Variable Declaration" class="md-nav__link">
+    Variable Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" title="Comparison" class="md-nav__link">
+    Comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#associated-values" title="Associated Values" class="md-nav__link">
+    Associated Values
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -397,7 +514,34 @@
                 
                   <h1>Unions</h1>
                 
-                
+                <h2 id="declaration">Declaration</h2>
+<div class="codehilite"><pre><span></span><span class="n">Career</span> <span class="p">::</span> <span class="n">union</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">engineer</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span>
+    <span class="k">case</span> <span class="n">accountant</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">favouriteNumber</span><span class="p">:</span> <span class="n">f64</span><span class="p">)</span>
+    <span class="k">case</span> <span class="kr">none</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="variable-declaration">Variable Declaration</h2>
+<div class="codehilite"><pre><span></span><span class="n">myCareer</span><span class="p">:</span> <span class="n">Career</span> <span class="p">=</span> <span class="p">.</span><span class="n">engineer</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="s">&quot;Software&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="comparison">Comparison</h2>
+<div class="codehilite"><pre><span></span><span class="n">myCareer</span><span class="p">:</span> <span class="n">Career</span> <span class="p">=</span> <span class="p">.</span><span class="n">engineer</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="s">&quot;Software&quot;</span><span class="p">)</span>
+<span class="n">herCareer</span><span class="p">:</span> <span class="n">Career</span> <span class="p">=</span> <span class="p">.</span><span class="n">accountant</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="s">&quot;General&quot;</span><span class="p">,</span> <span class="n">favouriteNumber</span><span class="p">:</span> <span class="mf">3.14</span><span class="p">)</span>
+
+<span class="bp">print</span><span class="p">(</span><span class="n">myCareer</span> <span class="p">==</span> <span class="n">herCareer</span><span class="p">)</span> <span class="c1">// false</span>
+</pre></div>
+
+
+<h2 id="associated-values">Associated Values</h2>
+<div class="codehilite"><pre><span></span><span class="n">hisCareer</span><span class="p">:</span> <span class="n">Career</span> <span class="p">=</span> <span class="p">.</span><span class="n">engineer</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="s">&quot;Civil&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">hisCareer</span> <span class="p">=</span> <span class="p">.</span><span class="n">engineer</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="n">hisCareer</span><span class="p">.</span><span class="n">field</span><span class="p">)</span> <span class="c1">// Civil</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 
@@ -431,13 +575,13 @@
           </a>
         
         
-          <a href="../struct/" title="Structs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../struct/" title="Structures" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Structs
+                Structures
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -15,7 +15,7 @@
     
     
       
-        <title>Structs - Kai Lang</title>
+        <title>Structures - Kai Lang</title>
       
     
     
@@ -80,7 +80,7 @@
                 </span>
               
             
-            Structs
+            Structures
           
         </span>
       </div>
@@ -299,10 +299,63 @@
       
     
     
-    <a href="./" title="Structs" class="md-nav__link md-nav__link--active">
-      Structs
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Structures
+      </label>
+    
+    <a href="./" title="Structures" class="md-nav__link md-nav__link--active">
+      Structures
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" title="Declaration" class="md-nav__link">
+    Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialisation" title="Initialisation" class="md-nav__link">
+    Initialisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-values" title="Default Values" class="md-nav__link">
+    Default Values
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../type-def/" title="Type Definition" class="md-nav__link">
+      Type Definition
+    </a>
   </li>
 
         
@@ -365,8 +418,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../compile-time/" title="Compile Time Execution" class="md-nav__link">
+      Compile Time Execution
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../../entry-point/" title="Entry Point" class="md-nav__link">
       Entry Point
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../c/" title="Working with C" class="md-nav__link">
+      Working with C
     </a>
   </li>
 
@@ -388,6 +465,34 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" title="Declaration" class="md-nav__link">
+    Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialisation" title="Initialisation" class="md-nav__link">
+    Initialisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-values" title="Default Values" class="md-nav__link">
+    Default Values
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -400,6 +505,34 @@
                 
                 
                 <h1 id="structs">Structs</h1>
+<h2 id="declaration">Declaration</h2>
+<div class="codehilite"><pre><span></span><span class="n">Person</span> <span class="p">::</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">string</span>
+    <span class="n">age</span><span class="p">:</span> <span class="n">i8</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="initialisation">Initialisation</h2>
+<div class="codehilite"><pre><span></span><span class="n">me</span><span class="p">:</span> <span class="n">Person</span> <span class="p">=</span> <span class="p">{</span>
+    <span class="n">name</span> <span class="p">=</span> <span class="s">&quot;Glenn&quot;</span><span class="p">,</span>
+    <span class="n">age</span> <span class="p">=</span> <span class="mi">30</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="default-values">Default Values</h2>
+<div class="codehilite"><pre><span></span><span class="n">Car</span> <span class="p">::</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="n">model</span><span class="p">:</span> <span class="n">string</span>
+    <span class="n">maker</span><span class="p">:</span> <span class="n">string</span>
+    <span class="n">wheels</span><span class="p">:</span> <span class="n">i8</span> <span class="p">=</span> <span class="mi">4</span>
+<span class="p">}</span>
+
+<span class="n">modelS</span><span class="p">:</span> <span class="n">Car</span> <span class="p">=</span> <span class="p">{</span>
+    <span class="n">model</span> <span class="p">=</span> <span class="s">&quot;Model S&quot;</span>
+    <span class="n">maker</span> <span class="p">=</span> <span class="s">&quot;Tesla&quot;</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 
@@ -433,13 +566,13 @@
           </a>
         
         
-          <a href="../../operator/" title="Operators" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../type-def/" title="Type Definition" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Operators
+                Type Definition
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
