@@ -228,22 +228,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#variables-and-constants" title="Variables and Constants" class="md-nav__link">
+    Variables and Constants
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#simple-declarations" title="Simple Declarations" class="md-nav__link">
     Simple Declarations
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#type-annotation" title="Type Annotation" class="md-nav__link">
     Type Annotation
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#compile-time-type-annotation" title="Compile-Time Type Annotation" class="md-nav__link">
-    Compile-Time Type Annotation
+  <a href="#naming" title="Naming" class="md-nav__link">
+    Naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-and-shadowing" title="Scope and Shadowing" class="md-nav__link">
+    Scope and Shadowing
   </a>
   
 </li>
@@ -477,22 +497,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#variables-and-constants" title="Variables and Constants" class="md-nav__link">
+    Variables and Constants
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#simple-declarations" title="Simple Declarations" class="md-nav__link">
     Simple Declarations
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#type-annotation" title="Type Annotation" class="md-nav__link">
     Type Annotation
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#compile-time-type-annotation" title="Compile-Time Type Annotation" class="md-nav__link">
-    Compile-Time Type Annotation
+  <a href="#naming" title="Naming" class="md-nav__link">
+    Naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-and-shadowing" title="Scope and Shadowing" class="md-nav__link">
+    Scope and Shadowing
   </a>
   
 </li>
@@ -518,43 +558,132 @@
 <p>Kai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here, <a href="./install">Install Kai</a> to get started!</p>
 <h2 id="getting-started">Getting Started</h2>
 <p>As per tradition, let's start with a hello world application.</p>
-<div class="codehilite"><pre><span></span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Statements in global scope are temporarily disabled. As global scope is limited to declarations, please define a <a href="./entry-point">main</a> procedure.</p>
 </div>
-<h2 id="simple-declarations">Simple Declarations</h2>
-<div class="codehilite"><pre><span></span><span class="n">myInt</span> <span class="p">:=</span> <span class="mi">15</span>
-<span class="n">myIntCopy</span> <span class="p">:=</span> <span class="n">myInt</span>
+<p>Unlike many other programming languages, Kai doesn't require you to explicitly define a <a href="./entry-point/"><code>main()</code></a> or import any <a href="./module/">modules</a> to build an application.</p>
+<h2 id="variables-and-constants">Variables and Constants</h2>
+<p>Variables and constants match a name to a value (similar to <code>x</code> in algebra). Variables are values that are allowed to change (<code>mutable</code>/<code>runtime</code>) while constants are values that aren't allowed to change (<code>immutable</code>/<code>compile-time</code>).</p>
+<h3 id="simple-declarations">Simple Declarations</h3>
+<p>The syntax for declaring a variable is quite straightforward. Simply provide a name followed by <code>:=</code> and a value.</p>
+<p>Here's an example:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="p">:=</span> <span class="mi">15</span>
 </pre></div>
+</td></tr></table>
 
-
-<div class="codehilite"><pre><span></span><span class="n">myString</span> <span class="p">:=</span> <span class="s">&quot;👋&quot;</span>
-<span class="err">🔒</span> <span class="p">:=</span> <span class="kc">true</span>
+<p>The previous line created a variable named <code>x</code> and set its value to <code>15</code>.</p>
+<p>It's also possible to declare a variable using another variable (or constant) as its value. The following example will create a variable <code>a</code> with the value <code>1</code> and another variable <code>b</code> with the value of <code>a</code> (also <code>1</code>).</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">a</span> <span class="p">:=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="p">:=</span> <span class="n">a</span>
 </pre></div>
+</td></tr></table>
 
-
-<h2 id="type-annotation">Type Annotation</h2>
-<div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="n">int</span> <span class="p">=</span> <span class="mi">5</span>
+<p>You can combine the previous example into a single line.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="p">:=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
 </pre></div>
+</td></tr></table>
 
+<p>As a variable is a mutable value, you can change its value by using the <a href="./operator/">assignment operator</a> (<code>=</code>)</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="p">:=</span> <span class="mi">0</span>
+<span class="n">x</span> <span class="p">=</span> <span class="mi">7</span>
+</pre></div>
+</td></tr></table>
+
+<p><code>x</code> will now have the value <code>7</code>. Try printing it:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="bp">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>If you want to declare a value as a constant, you can use the <a href="./operator/">constant declaration operator</a> (<code>::</code>).</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">seven</span> <span class="p">::</span> <span class="mi">7</span>
+</pre></div>
+</td></tr></table>
+
+<p>Since a constant is immutable, the following code will cause an error:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">seven</span> <span class="p">::</span> <span class="mi">7</span>
+<span class="hll"><span class="n">seven</span> <span class="p">=</span> <span class="mi">2</span> <span class="c1">// error</span>
+</span></pre></div>
+</td></tr></table>
+
+<h3 id="type-annotation">Type Annotation</h3>
+<p>In most cases, the compiler is smart enough to infer the type of variable you want to use, but in certain cercumstances you may be required to give it a hint/annotation. Doing so is quite similar to a normal variable declaration.</p>
+<p>First, let's start with annotating a variable value:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">age</span> <span class="p">:</span> <span class="n">int</span> <span class="p">=</span> <span class="mi">23</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now, a constant value:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">five</span> <span class="p">:</span> <span class="n">int</span> <span class="p">:</span> <span class="mi">5</span>
+</pre></div>
+</td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Continue <a href="./types/basic/">here</a> to learn more about Kai types.</p>
+<p>Learn more about <code>Kai Types</code> <a href="./types/basic/">here</a>
+ and <code>Compile Time Execution</code> <a href="./compile-time">here</a>.</p>
 </div>
-<h2 id="compile-time-type-annotation">Compile-Time Type Annotation</h2>
-<div class="codehilite"><pre><span></span><span class="n">age</span><span class="p">:</span> <span class="n">int</span> <span class="p">:</span> <span class="mi">32</span>
+<h2 id="naming">Naming</h2>
+<p>Variables and constants can be named just about any unicode character other than whitespace and mathematical symbols. When a value is named, that name cannot be used again within the same <a href="#scope">scope</a>. Names (<code>identifiers</code>) cannot start with a number, but a number can be included within the name.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">이름</span> <span class="p">:=</span> <span class="s">&quot;만세&quot;</span>
+<span class="err">🔒</span>  <span class="p">:=</span> <span class="kc">true</span>
+<span class="err">τ</span>   <span class="p">:=</span> <span class="mf">6.28</span>
 </pre></div>
+</td></tr></table>
 
+<h2 id="scope-and-shadowing">Scope and Shadowing</h2>
+<p>Blocks of code are organised as scopes. A scope is defined as the code in-between <code>{</code> and <code>}</code>. You are entering a scope when you see <code>{</code> and exiting when you see <code>}</code>. Variables and constants are allowed to enter a scope, but they are not allowed to leave the scope they are declared in.</p>
+<p>For example:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">message</span> <span class="p">:=</span> <span class="s">&quot;Hello!&quot;</span>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Learn more about <code>Compile Time Execution</code> <a href="./compile-time">here</a>.</p>
-</div>
+<span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="c1">// Prints &quot;Hello!&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>is allowed because <code>message</code> is going deeper in scope. But:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="n">message</span> <span class="p">:=</span> <span class="s">&quot;Hello!&quot;</span>
+<span class="p">}</span>
+
+<span class="hll"><span class="bp">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="c1">// Error &quot;Unknown identifier `message`&quot;</span>
+</span></pre></div>
+</td></tr></table>
+
+<p>is not allowed because <code>message</code> is not allowed to exit the scope it was declared in. When entering a new scope, you are allowed to reuse names. This feature is known as <code>shadowing</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">aValue</span> <span class="p">:=</span> <span class="mi">8675309</span>
+<span class="p">{</span>
+    <span class="n">aValue</span> <span class="p">:=</span> <span class="s">&quot;I shadowed a value.&quot;</span>
+    <span class="bp">print</span><span class="p">(</span><span class="n">aValue</span><span class="p">)</span> <span class="c1">// Prints &quot;I shadowed a value.&quot;</span>
+<span class="p">}</span>
+
+<span class="bp">print</span><span class="p">(</span><span class="n">aValue</span><span class="p">)</span> <span class="c1">// Prints &quot;8675309&quot;</span>
+</pre></div>
+</td></tr></table>
                 
                   
                 

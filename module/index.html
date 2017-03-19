@@ -525,38 +525,45 @@
                   <h1>Import and Modules</h1>
                 
                 <h2 id="import-a-file">Import a File</h2>
-<div class="codehilite"><pre><span></span><span class="p">#</span><span class="kd">import</span> <span class="s">&quot;another_file&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">#</span><span class="kd">import</span> <span class="s">&quot;another_file&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="import-from-git">Import from Git</h2>
-<div class="codehilite"><pre><span></span><span class="c1">// github</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// github</span>
 <span class="p">#</span><span class="kd">import</span> <span class="nc">git</span><span class="p">(</span><span class="s">&quot;author/repo&quot;</span><span class="p">)</span>
 
 <span class="c1">// external</span>
 <span class="p">#</span><span class="kd">import</span> <span class="nc">git</span><span class="p">(</span><span class="s">&quot;https://external.com/author/repo&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="alias-an-import">Alias an Import</h2>
-<div class="codehilite"><pre><span></span><span class="p">#</span><span class="kd">import</span> <span class="s">&quot;math&quot;</span> <span class="nc">as</span> <span class="nc">mathy</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">#</span><span class="kd">import</span> <span class="s">&quot;math&quot;</span> <span class="nc">as</span> <span class="nc">mathy</span>
 <span class="bp">print</span><span class="p">(</span><span class="n">mathy</span><span class="p">.</span><span class="n">pi</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="import-a-c-header">Import a C Header</h2>
-<div class="codehilite"><pre><span></span><span class="p">#</span><span class="kd">import</span> <span class="s">&quot;stdio.h&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">#</span><span class="kd">import</span> <span class="s">&quot;stdio.h&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Learn more about <code>Working with C</code> <a href="../c">here</a>.</p>
 </div>
 <h2 id="pre-compiled-library">Pre-Compiled Library</h2>
-<div class="codehilite"><pre><span></span><span class="c1">// include and link against glibc</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// include and link against glibc</span>
 <span class="p">#</span><span class="n">library</span> <span class="n">glibc</span> <span class="s">&quot;/path/to/umbrella.h&quot;</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 
