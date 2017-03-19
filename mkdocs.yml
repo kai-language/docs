@@ -25,3 +25,4 @@ markdown_extensions:
     - admonition
 repo_url: https://github.com/kai-language/docs
 repo_name: Kai-Lang
+edit_uri: edit/master/docs/
