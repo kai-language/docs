@@ -12,3 +12,14 @@ print("Hello, world!")
 
 !!! warning
     Statements in global scope are temporarily disabled. As global scope is limited to declarations, please define a [main](/entry-point) procedure.
+
+## Simple Declarations
+```swift
+myInt := 15
+myIntCopy := myInt
+```
+
+```swift
+myString := "👋"
+🔒 := true
+```

@@ -3,9 +3,16 @@ pages:
     - The Basics: index.md
     - Types:
         - Basic Types: types/basic.md
+        - Arrays: types/array.md
+        - Pointers: types/pointer.md
+        - Enumerations: types/enumeration.md
+        - Unions: types/union.md
         - Structs: types/struct.md
+    - Operators: operator.md
+    - Control Flow: control-flow.md
+    - Procedures: procedure.md
+    - Import and Modules: module.md
     - Entry Point: entry-point.md
-    - About: about.md
 extra_css:
     - css/extra.css
 theme: material
