@@ -8,12 +8,15 @@ pages:
         - Pointers: types/pointer.md
         - Enumerations: types/enumeration.md
         - Unions: types/union.md
-        - Structs: types/struct.md
+        - Structures: types/struct.md
+        - Type Definition: types/type-def.md
     - Operators: operator.md
     - Control Flow: control-flow.md
     - Procedures: procedure.md
     - Import and Modules: module.md
+    - Compile Time Execution: compile-time.md
     - Entry Point: entry-point.md
+    - Working with C: c.md
 extra_css:
     - css/extra.css
 theme: material

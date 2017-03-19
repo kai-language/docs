@@ -23,3 +23,19 @@ myIntCopy := myInt
 myString := "👋"
 🔒 := true
 ```
+
+## Type Annotation
+```swift
+x: int = 5
+```
+
+!!! note
+	Continue [here](/types/basic/) to learn more about Kai types.
+
+## Compile-Time Type Annotation
+```swift
+age: int : 32
+```
+
+!!! note
+	Learn more about `Compile Time Execution` [here](/compile-time).
