@@ -1,6 +1,6 @@
 # The Basics
 
-Kai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way.
+Kai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here, [Install Kai](/install) to get started!
 
 ## Getting Started
 

@@ -1,5 +1,6 @@
 site_name: Kai Lang
 pages:
+    - Install: install.md
     - The Basics: index.md
     - Types:
         - Basic Types: types/basic.md
@@ -19,3 +20,5 @@ theme: material
 markdown_extensions:
     - codehilite
     - admonition
+repo_url: https://github.com/kai-language/docs
+repo_name: Kai-Lang
