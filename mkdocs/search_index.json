@@ -1,13 +1,18 @@
 {
     "docs": [
         {
+            "location": "/install/", 
+            "text": "", 
+            "title": "Install"
+        }, 
+        {
             "location": "/", 
-            "text": "The Basics\n\n\nKai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way.\n\n\nGetting Started\n\n\nAs per tradition, let's start with a hello world application.\n\n\nprint\n(\nHello, world!\n)\n\n\n\n\n\n\n\n\nWarning\n\n\nStatements in global scope are temporarily disabled. As global scope is limited to declarations, please define a \nmain\n procedure.\n\n\n\n\nSimple Declarations\n\n\nmyInt\n \n:=\n \n15\n\n\nmyIntCopy\n \n:=\n \nmyInt\n\n\n\n\n\n\nmyString\n \n:=\n \n\ud83d\udc4b\n\n\n\ud83d\udd12\n \n:=\n \ntrue", 
+            "text": "The Basics\n\n\nKai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here, \nInstall Kai\n to get started!\n\n\nGetting Started\n\n\nAs per tradition, let's start with a hello world application.\n\n\nprint\n(\nHello, world!\n)\n\n\n\n\n\n\n\n\nWarning\n\n\nStatements in global scope are temporarily disabled. As global scope is limited to declarations, please define a \nmain\n procedure.\n\n\n\n\nSimple Declarations\n\n\nmyInt\n \n:=\n \n15\n\n\nmyIntCopy\n \n:=\n \nmyInt\n\n\n\n\n\n\nmyString\n \n:=\n \n\ud83d\udc4b\n\n\n\ud83d\udd12\n \n:=\n \ntrue", 
             "title": "The Basics"
         }, 
         {
             "location": "/#the-basics", 
-            "text": "Kai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way.", 
+            "text": "Kai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here,  Install Kai  to get started!", 
             "title": "The Basics"
         }, 
         {
