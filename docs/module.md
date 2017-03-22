@@ -34,5 +34,5 @@ print(mathy.pi)
 
 ```swift
 // include and link against glibc
-#library glibc "/path/to/umbrella.h"
+#library "/path/to/umbrella.h" glibc
 ```
