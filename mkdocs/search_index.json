@@ -207,7 +207,7 @@
         }, 
         {
             "location": "/module/", 
-            "text": "Import a File\n\n\n1\n#\nimport\n \nanother_file\n\n\n\n\n\n\n\nImport from Git\n\n\n1\n2\n3\n4\n5\n// github\n\n\n#\nimport\n \ngit\n(\nauthor/repo\n)\n\n\n\n// external\n\n\n#\nimport\n \ngit\n(\nhttps://external.com/author/repo\n)\n\n\n\n\n\n\n\nAlias an Import\n\n\n1\n2\n#\nimport\n \nmath\n \nas\n \nmathy\n\n\nprint\n(\nmathy\n.\npi\n)\n\n\n\n\n\n\n\nImport a C Header\n\n\n1\n#\nimport\n \nstdio.h\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nWorking with C\n \nhere\n.\n\n\n\n\nPre-Compiled Library\n\n\n1\n2\n// include and link against glibc\n\n\n#\nlibrary\n \nglibc\n \n/path/to/umbrella.h", 
+            "text": "Import a File\n\n\n1\n#\nimport\n \nanother_file\n\n\n\n\n\n\n\nImport from Git\n\n\n1\n2\n3\n4\n5\n// github\n\n\n#\nimport\n \ngit\n(\nauthor/repo\n)\n\n\n\n// external\n\n\n#\nimport\n \ngit\n(\nhttps://external.com/author/repo\n)\n\n\n\n\n\n\n\nAlias an Import\n\n\n1\n2\n#\nimport\n \nmath\n \nas\n \nmathy\n\n\nprint\n(\nmathy\n.\npi\n)\n\n\n\n\n\n\n\nImport a C Header\n\n\n1\n#\nimport\n \nstdio.h\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nWorking with C\n \nhere\n.\n\n\n\n\nPre-Compiled Library\n\n\n1\n2\n// include and link against glibc\n\n\n#\nlibrary\n \n/path/to/umbrella.h\n \nglibc", 
             "title": "Import and Modules"
         }, 
         {
@@ -232,7 +232,7 @@
         }, 
         {
             "location": "/module/#pre-compiled-library", 
-            "text": "1\n2 // include and link against glibc  # library   glibc   /path/to/umbrella.h", 
+            "text": "1\n2 // include and link against glibc  # library   /path/to/umbrella.h   glibc", 
             "title": "Pre-Compiled Library"
         }, 
         {
