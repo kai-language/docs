@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-4d0d3f2fbf.css">
       
     
     
@@ -85,11 +85,12 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -431,7 +432,7 @@
                 
                 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span class="n">sum</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">i32</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span> <span class="p">{</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">sum</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">i32</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 <span class="p">}</span>
 </pre></div>
@@ -439,7 +440,7 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span class="n">mul</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span> <span class="p">{</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">mul</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 <span class="p">}</span>
 </pre></div>
@@ -450,7 +451,7 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span class="n">sumAndMul</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span><span class="p">,</span> <span class="n">i32</span> <span class="p">{</span>
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">sumAndMul</span> <span class="p">::</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">i32</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">i32</span><span class="p">,</span> <span class="n">i32</span> <span class="p">{</span>
     <span class="n">sum</span> <span class="p">:=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
     <span class="n">prod</span> <span class="p">:=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 
@@ -527,7 +528,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application-3964c0cb56.js"></script>
+      <script src="../assets/javascripts/application-6b599127bc.js"></script>
       <script>app.initialize({url:{base:".."}})</script>
       
     

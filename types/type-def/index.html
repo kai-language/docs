@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-4d0d3f2fbf.css">
       
     
     
@@ -89,11 +89,12 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -436,12 +437,12 @@
                   <h1>Type Definition</h1>
                 
                 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nb">Int64</span> <span class="p">::</span> <span class="n">i64</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">Int64</span> <span class="p">::</span> <span class="n">i64</span>
 <span class="n">Long</span> <span class="p">::</span> <span class="nb">Int64</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nb">Int</span> <span class="p">::</span> <span class="p">#</span><span class="n">foreign</span><span class="p">(</span><span class="n">LLVM</span><span class="p">)</span> <span class="s">&quot;i64&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">Int</span> <span class="p">::</span> <span class="p">#</span><span class="n">foreign</span><span class="p">(</span><span class="n">LLVM</span><span class="p">)</span> <span class="s">&quot;i64&quot;</span>
 </pre></div>
 </td></tr></table>
                 
@@ -513,7 +514,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script src="../../assets/javascripts/application-6b599127bc.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     
