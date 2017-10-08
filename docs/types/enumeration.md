@@ -2,36 +2,45 @@
 
 ```swift
 Direction :: enum {
-	case up
-	case down
-	case left
-	case right
+	up,
+	down,
+	left,
+	right
 }
 ```
 
 ## Variable Declaration
 ```swift
-direction: Direction = .up
+direction := Direction.up
 ```
 
 ## Control Flow
 ```swift
-direction: Direction = .down
+direction := Direction.down
 
 switch direction {
-case .up
+case Direction.up
     print("up")
 
-case .down
+case Direction.down
 	print("down")
 
-case .left
+case Direction.left
 	print("left")
 
-case .right
+case Direction.right
 	print("right")
 }
 ```
 
 !!! note
 	Learn more about `Control Flow` [here](/control-flow/).
+
+## Associated values
+```swift
+Mode :: enum(u8) {
+	indirect = 1,
+	relative,
+	absolute
+}
+```

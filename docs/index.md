@@ -6,7 +6,7 @@ Kai is a new programming language that aims to be C with a touch of modernism. K
 
 As per tradition, let's start with a hello world application.
 
-```swift
+```go
 print("Hello, world!")
 ```
 
@@ -23,7 +23,7 @@ The syntax for declaring a variable is quite straightforward. Simply provide a n
 
 Here's an example:
 
-```swift
+```go
 x := 15
 ```
 
@@ -31,38 +31,38 @@ The previous line created a variable named `x` and set its value to `15`.
 
 It's also possible to declare a variable using another variable (or constant) as its value. The following example will create a variable `a` with the value `1` and another variable `b` with the value of `a` (also `1`).
 
-```swift
+```go
 a := 1
 b := a
 ```
 
 You can combine the previous example into a single line.
-```swift
+```go
 a, b := 1, 1
 ```
 
 As a variable is a mutable value, you can change its value by using the [assignment operator](/operator/) (`=`)
 
-```swift
+```go
 x := 0
 x = 7
 ```
 
 `x` will now have the value `7`. Try printing it:
 
-```swift
+```go
 print(x)
 ```
 
 If you want to declare a value as a constant, you can use the [constant declaration operator](/operator/) (`::`).
 
-```swift
+```go
 seven :: 7
 ```
 
 Since a constant is immutable, the following code will cause an error:
 
-```swift hl_lines="2"
+```go hl_lines="2"
 seven :: 7
 seven = 2 // error
 ```
@@ -72,14 +72,14 @@ In most cases, the compiler is smart enough to infer the type of variable you wa
 
 First, let's start with annotating a variable value:
 
-```swift
-age : int = 23
+```go
+age : i64 = 23
 ```
 
 Now, a constant value:
 
-```swift
-five : int : 5
+```go
+five : i64 : 5
 ```
 
 !!! note
@@ -89,7 +89,7 @@ five : int : 5
 ## Naming
 Variables and constants can be named just about any unicode character other than whitespace and mathematical symbols. When a value is named, that name cannot be used again within the same [scope](#scope). Names (`identifiers`) cannot start with a number, but a number can be included within the name.
 
-```swift
+```go
 이름 := "만세"
 🔒  := true
 τ   := 6.28
@@ -100,7 +100,7 @@ Blocks of code are organised as scopes. A scope is defined as the code in-betwee
 
 For example:
 
-```swift
+```go
 message := "Hello!"
 
 {
@@ -109,7 +109,7 @@ message := "Hello!"
 ```
 is allowed because `message` is going deeper in scope. But:
 
-```swift hl_lines="5"
+```go hl_lines="5"
 {
 	message := "Hello!"
 }
@@ -119,7 +119,7 @@ print(message) // Error "Unknown identifier `message`"
 
 is not allowed because `message` is not allowed to exit the scope it was declared in. When entering a new scope, you are allowed to reuse names. This feature is known as `shadowing`.
 
-```swift
+```go
 aValue := 8675309
 {
 	aValue := "I shadowed a value."

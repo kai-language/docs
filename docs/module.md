@@ -1,7 +1,7 @@
 ## Import a File
 
 ```swift
-#import "another_file"
+#import "strings.kai"
 ```
 
 ## Import from Git
@@ -17,7 +17,7 @@
 ## Alias an Import
 
 ```swift
-#import "math" as mathy
+#import "math" mathy
 print(mathy.pi)
 ```
 

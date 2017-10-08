@@ -1,31 +1,31 @@
 ## Declaration
 
 ```swift
-Career :: union {
-	case engineer(field: string)
-	case accountant(field: string, favouriteNumber: f64)
-	case none
+Data :: union {
+	i: i64,
+	f: f64,
+	s: string
 }
 ```
 
-## Variable Declaration
 ```swift
-myCareer: Career = .engineer(field: "Software")
+data := Data
+data.f = 3.14159
+printf("data.f: %f\n".raw, data.f)
+printf("data.i: %d\n".raw, data.i)
+printf("data.s: %s\n".raw, data.s)
 ```
 
-## Comparison
+
 ```swift
-myCareer: Career = .engineer(field: "Software")
-herCareer: Career = .accountant(field: "General", favouriteNumber: 3.14)
+data := Data
 
-print(myCareer == herCareer) // false
-```
+data.i = 100
+printf("data.i: %d\n".raw, data.i)
 
-## Associated Values
+data.f = 3.14159
+printf("data.f: %f\n".raw, data.f)
 
-```swift hl_lines="3"
-hisCareer: Career = .engineer(field: "Civil")
-if hisCareer = .engineer {
-	print(hisCareer.field) // Civil
-}
+data.s = "Unions!"
+printf("data.s: %s\n".raw, data.s)
 ```

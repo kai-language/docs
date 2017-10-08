@@ -32,7 +32,7 @@ for child in children {
 
 ## While Loop
 ```swift
-while true {
+for true {
 	// ...
 }
 ```
@@ -47,7 +47,7 @@ switch gender {
 	case .female:
 		break
 
-	default:
+	case: // default
 		break
 }
 ```

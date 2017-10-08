@@ -6,9 +6,9 @@ pages:
         - Basic Types: types/basic.md
         - Arrays: types/array.md
         - Pointers: types/pointer.md
-        - Enumerations: types/enumeration.md
+        - Enums: types/enumeration.md
         - Unions: types/union.md
-        - Structures: types/struct.md
+        - Structs: types/struct.md
         - Type Definition: types/type-def.md
     - Operators: operator.md
     - Control Flow: control-flow.md

@@ -5,30 +5,24 @@
 ```swift
 Person :: struct {
 	name: string
-	age: i8
+	age: u8
 }
 ```
 
-## Initialisation
+## Initialization
 
 ```swift
-me: Person = {
-	name = "Glenn",
-	age = 30
+me := Person {
+	"Glenn",
+	30
 }
 ```
 
-## Default Values
+Struct initialization can be with or without argument labels. If the labels are provided, the fields can be declared in any order. For example:
 
 ```swift
-Car :: struct {
-	model: string
-	maker: string
-	wheels: i8 = 4
-}
-
-modelS: Car = {
-	model = "Model S"
-	maker = "Tesla"
+me := Person {
+	age: 24,
+	name: "Brett"
 }
 ```

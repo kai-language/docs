@@ -37,7 +37,7 @@ name: string = "John"
 
 ## Unconstrained Types
 ```swift hl_lines="6 10"
-myproc :: (anI32: i32) -> Void {
+myproc :: (anI32: i32) -> void {
 	// ...
 }
 
