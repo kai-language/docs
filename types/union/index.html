@@ -268,8 +268,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../enumeration/" title="Enumerations" class="md-nav__link">
-      Enumerations
+    <a href="../enumeration/" title="Enums" class="md-nav__link">
+      Enums
     </a>
   </li>
 
@@ -309,27 +309,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#variable-declaration" title="Variable Declaration" class="md-nav__link">
-    Variable Declaration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparison" title="Comparison" class="md-nav__link">
-    Comparison
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#associated-values" title="Associated Values" class="md-nav__link">
-    Associated Values
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -345,8 +324,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../struct/" title="Structures" class="md-nav__link">
-      Structures
+    <a href="../struct/" title="Structs" class="md-nav__link">
+      Structs
     </a>
   </li>
 
@@ -477,27 +456,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#variable-declaration" title="Variable Declaration" class="md-nav__link">
-    Variable Declaration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparison" title="Comparison" class="md-nav__link">
-    Comparison
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#associated-values" title="Associated Values" class="md-nav__link">
-    Associated Values
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -522,38 +480,45 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Career</span> <span class="p">::</span> <span class="n">union</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="n">engineer</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span>
-    <span class="k">case</span> <span class="n">accountant</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">favouriteNumber</span><span class="p">:</span> <span class="n">f64</span><span class="p">)</span>
-    <span class="k">case</span> <span class="kr">none</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Data</span> <span class="p">::</span> <span class="n">union</span> <span class="p">{</span>
+    <span class="n">i</span><span class="p">:</span> <span class="n">i64</span><span class="p">,</span>
+    <span class="n">f</span><span class="p">:</span> <span class="n">f64</span><span class="p">,</span>
+    <span class="n">s</span><span class="p">:</span> <span class="n">string</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="variable-declaration">Variable Declaration</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">myCareer</span><span class="p">:</span> <span class="n">Career</span> <span class="p">=</span> <span class="p">.</span><span class="n">engineer</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="s">&quot;Software&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
-<h2 id="comparison">Comparison</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">myCareer</span><span class="p">:</span> <span class="n">Career</span> <span class="p">=</span> <span class="p">.</span><span class="n">engineer</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="s">&quot;Software&quot;</span><span class="p">)</span>
-<span class="n">herCareer</span><span class="p">:</span> <span class="n">Career</span> <span class="p">=</span> <span class="p">.</span><span class="n">accountant</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="s">&quot;General&quot;</span><span class="p">,</span> <span class="n">favouriteNumber</span><span class="p">:</span> <span class="mf">3.14</span><span class="p">)</span>
-
-<span class="bp">print</span><span class="p">(</span><span class="n">myCareer</span> <span class="p">==</span> <span class="n">herCareer</span><span class="p">)</span> <span class="c1">// false</span>
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">data</span> <span class="p">:=</span> <span class="n">Data</span>
+<span class="n">data</span><span class="p">.</span><span class="n">f</span> <span class="p">=</span> <span class="mf">3.14159</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;data.f: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">.</span><span class="n">raw</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">f</span><span class="p">)</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;data.i: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">.</span><span class="n">raw</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">i</span><span class="p">)</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;data.s: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">.</span><span class="n">raw</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="associated-values">Associated Values</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">hisCareer</span><span class="p">:</span> <span class="n">Career</span> <span class="p">=</span> <span class="p">.</span><span class="n">engineer</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="s">&quot;Civil&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">hisCareer</span> <span class="p">=</span> <span class="p">.</span><span class="n">engineer</span> <span class="p">{</span>
-<span class="hll">    <span class="bp">print</span><span class="p">(</span><span class="n">hisCareer</span><span class="p">.</span><span class="n">field</span><span class="p">)</span> <span class="c1">// Civil</span>
-</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">data</span> <span class="p">:=</span> <span class="n">Data</span>
+
+<span class="n">data</span><span class="p">.</span><span class="n">i</span> <span class="p">=</span> <span class="mi">100</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;data.i: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">.</span><span class="n">raw</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">data</span><span class="p">.</span><span class="n">f</span> <span class="p">=</span> <span class="mf">3.14159</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;data.f: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">.</span><span class="n">raw</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">data</span><span class="p">.</span><span class="n">s</span> <span class="p">=</span> <span class="s">&quot;Unions!&quot;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;data.s: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">.</span><span class="n">raw</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
                 
@@ -574,7 +539,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../enumeration/" title="Enumerations" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../enumeration/" title="Enums" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -583,19 +548,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Enumerations
+                Enums
               </span>
             </div>
           </a>
         
         
-          <a href="../struct/" title="Structures" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../struct/" title="Structs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Structures
+                Structs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

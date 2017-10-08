@@ -339,8 +339,8 @@
 
 
   <li class="md-nav__item">
-    <a href="types/enumeration/" title="Enumerations" class="md-nav__link">
-      Enumerations
+    <a href="types/enumeration/" title="Enums" class="md-nav__link">
+      Enums
     </a>
   </li>
 
@@ -363,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="types/struct/" title="Structures" class="md-nav__link">
-      Structures
+    <a href="types/struct/" title="Structs" class="md-nav__link">
+      Structs
     </a>
   </li>
 
@@ -559,7 +559,7 @@
 <p>Kai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here, <a href="./install">Install Kai</a> to get started!</p>
 <h2 id="getting-started">Getting Started</h2>
 <p>As per tradition, let's start with a hello world application.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -573,56 +573,56 @@
 <h3 id="simple-declarations">Simple Declarations</h3>
 <p>The syntax for declaring a variable is quite straightforward. Simply provide a name followed by <code>:=</code> and a value.</p>
 <p>Here's an example:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="p">:=</span> <span class="mi">15</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">x</span> <span class="o">:=</span> <span class="mi">15</span>
 </pre></div>
 </td></tr></table>
 
 <p>The previous line created a variable named <code>x</code> and set its value to <code>15</code>.</p>
 <p>It's also possible to declare a variable using another variable (or constant) as its value. The following example will create a variable <code>a</code> with the value <code>1</code> and another variable <code>b</code> with the value of <code>a</code> (also <code>1</code>).</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">a</span> <span class="p">:=</span> <span class="mi">1</span>
-<span class="n">b</span> <span class="p">:=</span> <span class="n">a</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="mi">1</span>
+<span class="nx">b</span> <span class="o">:=</span> <span class="nx">a</span>
 </pre></div>
 </td></tr></table>
 
 <p>You can combine the previous example into a single line.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="p">:=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
 <p>As a variable is a mutable value, you can change its value by using the <a href="./operator/">assignment operator</a> (<code>=</code>)</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="p">:=</span> <span class="mi">0</span>
-<span class="n">x</span> <span class="p">=</span> <span class="mi">7</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">x</span> <span class="o">:=</span> <span class="mi">0</span>
+<span class="nx">x</span> <span class="p">=</span> <span class="mi">7</span>
 </pre></div>
 </td></tr></table>
 
 <p><code>x</code> will now have the value <code>7</code>. Try printing it:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="bp">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p>If you want to declare a value as a constant, you can use the <a href="./operator/">constant declaration operator</a> (<code>::</code>).</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">seven</span> <span class="p">::</span> <span class="mi">7</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">seven</span> <span class="p">::</span> <span class="mi">7</span>
 </pre></div>
 </td></tr></table>
 
 <p>Since a constant is immutable, the following code will cause an error:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">seven</span> <span class="p">::</span> <span class="mi">7</span>
-<span class="hll"><span class="n">seven</span> <span class="p">=</span> <span class="mi">2</span> <span class="c1">// error</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">seven</span> <span class="p">::</span> <span class="mi">7</span>
+<span class="hll"><span class="nx">seven</span> <span class="p">=</span> <span class="mi">2</span> <span class="c1">// error</span>
 </span></pre></div>
 </td></tr></table>
 
 <h3 id="type-annotation">Type Annotation</h3>
 <p>In most cases, the compiler is smart enough to infer the type of variable you want to use, but in certain cercumstances you may be required to give it a hint/annotation. Doing so is quite similar to a normal variable declaration.</p>
 <p>First, let's start with annotating a variable value:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">age</span> <span class="p">:</span> <span class="n">int</span> <span class="p">=</span> <span class="mi">23</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">age</span> <span class="p">:</span> <span class="nx">i64</span> <span class="p">=</span> <span class="mi">23</span>
 </pre></div>
 </td></tr></table>
 
 <p>Now, a constant value:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">five</span> <span class="p">:</span> <span class="n">int</span> <span class="p">:</span> <span class="mi">5</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">five</span> <span class="p">:</span> <span class="nx">i64</span> <span class="p">:</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -635,9 +635,9 @@
 <p>Variables and constants can be named just about any unicode character other than whitespace and mathematical symbols. When a value is named, that name cannot be used again within the same <a href="#scope">scope</a>. Names (<code>identifiers</code>) cannot start with a number, but a number can be included within the name.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">이름</span> <span class="p">:=</span> <span class="s">&quot;만세&quot;</span>
-<span class="err">🔒</span>  <span class="p">:=</span> <span class="kc">true</span>
-<span class="err">τ</span>   <span class="p">:=</span> <span class="mf">6.28</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">이름</span> <span class="o">:=</span> <span class="s">&quot;만세&quot;</span>
+<span class="err">🔒</span>  <span class="o">:=</span> <span class="kc">true</span>
+<span class="nx">τ</span>   <span class="o">:=</span> <span class="mf">6.28</span>
 </pre></div>
 </td></tr></table>
 
@@ -648,10 +648,10 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">message</span> <span class="p">:=</span> <span class="s">&quot;Hello!&quot;</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">message</span> <span class="o">:=</span> <span class="s">&quot;Hello!&quot;</span>
 
 <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="c1">// Prints &quot;Hello!&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="c1">// Prints &quot;Hello!&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -662,10 +662,10 @@
 3
 4
 5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="n">message</span> <span class="p">:=</span> <span class="s">&quot;Hello!&quot;</span>
+    <span class="nx">message</span> <span class="o">:=</span> <span class="s">&quot;Hello!&quot;</span>
 <span class="p">}</span>
 
-<span class="hll"><span class="bp">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="c1">// Error &quot;Unknown identifier `message`&quot;</span>
+<span class="hll"><span class="nb">print</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="c1">// Error &quot;Unknown identifier `message`&quot;</span>
 </span></pre></div>
 </td></tr></table>
 
@@ -676,13 +676,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">aValue</span> <span class="p">:=</span> <span class="mi">8675309</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">aValue</span> <span class="o">:=</span> <span class="mi">8675309</span>
 <span class="p">{</span>
-    <span class="n">aValue</span> <span class="p">:=</span> <span class="s">&quot;I shadowed a value.&quot;</span>
-    <span class="bp">print</span><span class="p">(</span><span class="n">aValue</span><span class="p">)</span> <span class="c1">// Prints &quot;I shadowed a value.&quot;</span>
+    <span class="nx">aValue</span> <span class="o">:=</span> <span class="s">&quot;I shadowed a value.&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nx">aValue</span><span class="p">)</span> <span class="c1">// Prints &quot;I shadowed a value.&quot;</span>
 <span class="p">}</span>
 
-<span class="bp">print</span><span class="p">(</span><span class="n">aValue</span><span class="p">)</span> <span class="c1">// Prints &quot;8675309&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nx">aValue</span><span class="p">)</span> <span class="c1">// Prints &quot;8675309&quot;</span>
 </pre></div>
 </td></tr></table>
                 

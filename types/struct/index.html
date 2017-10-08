@@ -15,7 +15,7 @@
     
     
       
-        <title>Structures - Kai Lang</title>
+        <title>Structs - Kai Lang</title>
       
     
     
@@ -80,7 +80,7 @@
                 </span>
               
             
-            Structures
+            Structs
           
         </span>
       </div>
@@ -268,8 +268,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../enumeration/" title="Enumerations" class="md-nav__link">
-      Enumerations
+    <a href="../enumeration/" title="Enums" class="md-nav__link">
+      Enums
     </a>
   </li>
 
@@ -301,11 +301,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Structures
+        Structs
       </label>
     
-    <a href="./" title="Structures" class="md-nav__link md-nav__link--active">
-      Structures
+    <a href="./" title="Structs" class="md-nav__link md-nav__link--active">
+      Structs
     </a>
     
       
@@ -326,15 +326,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initialisation" title="Initialisation" class="md-nav__link">
-    Initialisation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-values" title="Default Values" class="md-nav__link">
-    Default Values
+  <a href="#initialization" title="Initialization" class="md-nav__link">
+    Initialization
   </a>
   
 </li>
@@ -477,15 +470,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initialisation" title="Initialisation" class="md-nav__link">
-    Initialisation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-values" title="Default Values" class="md-nav__link">
-    Default Values
+  <a href="#initialization" title="Initialization" class="md-nav__link">
+    Initialization
   </a>
   
 </li>
@@ -514,41 +500,29 @@
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Person</span> <span class="p">::</span> <span class="kd">struct</span> <span class="p">{</span>
     <span class="n">name</span><span class="p">:</span> <span class="n">string</span>
-    <span class="n">age</span><span class="p">:</span> <span class="n">i8</span>
+    <span class="n">age</span><span class="p">:</span> <span class="n">u8</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="initialisation">Initialisation</h2>
+<h2 id="initialization">Initialization</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">me</span><span class="p">:</span> <span class="n">Person</span> <span class="p">=</span> <span class="p">{</span>
-    <span class="n">name</span> <span class="p">=</span> <span class="s">&quot;Glenn&quot;</span><span class="p">,</span>
-    <span class="n">age</span> <span class="p">=</span> <span class="mi">30</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">me</span> <span class="p">:=</span> <span class="n">Person</span> <span class="p">{</span>
+    <span class="s">&quot;Glenn&quot;</span><span class="p">,</span>
+    <span class="mi">30</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="default-values">Default Values</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Car</span> <span class="p">::</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="n">model</span><span class="p">:</span> <span class="n">string</span>
-    <span class="n">maker</span><span class="p">:</span> <span class="n">string</span>
-    <span class="n">wheels</span><span class="p">:</span> <span class="n">i8</span> <span class="p">=</span> <span class="mi">4</span>
-<span class="p">}</span>
-
-<span class="n">modelS</span><span class="p">:</span> <span class="n">Car</span> <span class="p">=</span> <span class="p">{</span>
-    <span class="n">model</span> <span class="p">=</span> <span class="s">&quot;Model S&quot;</span>
-    <span class="n">maker</span> <span class="p">=</span> <span class="s">&quot;Tesla&quot;</span>
+<p>Struct initialization can be with or without argument labels. If the labels are provided, the fields can be declared in any order. For example:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">me</span> <span class="p">:=</span> <span class="n">Person</span> <span class="p">{</span>
+    <span class="n">age</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="n">name</span><span class="p">:</span> <span class="s">&quot;Brett&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>

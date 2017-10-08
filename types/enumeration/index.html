@@ -15,7 +15,7 @@
     
     
       
-        <title>Enumerations - Kai Lang</title>
+        <title>Enums - Kai Lang</title>
       
     
     
@@ -80,7 +80,7 @@
                 </span>
               
             
-            Enumerations
+            Enums
           
         </span>
       </div>
@@ -275,11 +275,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Enumerations
+        Enums
       </label>
     
-    <a href="./" title="Enumerations" class="md-nav__link md-nav__link--active">
-      Enumerations
+    <a href="./" title="Enums" class="md-nav__link md-nav__link--active">
+      Enums
     </a>
     
       
@@ -311,6 +311,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#associated-values" title="Associated values" class="md-nav__link">
+    Associated values
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -338,8 +345,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../struct/" title="Structures" class="md-nav__link">
-      Structures
+    <a href="../struct/" title="Structs" class="md-nav__link">
+      Structs
     </a>
   </li>
 
@@ -484,6 +491,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#associated-values" title="Associated values" class="md-nav__link">
+    Associated values
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -501,7 +515,7 @@
                   <a href="https://github.com/kai-language/docs/edit/master/docs/types/enumeration.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Enumerations</h1>
+                  <h1>Enums</h1>
                 
                 <h2 id="declaration">Declaration</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -510,16 +524,16 @@
 4
 5
 6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Direction</span> <span class="p">::</span> <span class="kd">enum</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="n">up</span>
-    <span class="k">case</span> <span class="n">down</span>
-    <span class="k">case</span> <span class="kr">left</span>
-    <span class="k">case</span> <span class="kr">right</span>
+    <span class="n">up</span><span class="p">,</span>
+    <span class="n">down</span><span class="p">,</span>
+    <span class="kr">left</span><span class="p">,</span>
+    <span class="kr">right</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
 <h2 id="variable-declaration">Variable Declaration</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">direction</span><span class="p">:</span> <span class="n">Direction</span> <span class="p">=</span> <span class="p">.</span><span class="n">up</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">direction</span> <span class="p">:=</span> <span class="n">Direction</span><span class="p">.</span><span class="n">up</span>
 </pre></div>
 </td></tr></table>
 
@@ -538,19 +552,19 @@
 12
 13
 14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">direction</span><span class="p">:</span> <span class="n">Direction</span> <span class="p">=</span> <span class="p">.</span><span class="n">down</span>
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">direction</span> <span class="p">:=</span> <span class="n">Direction</span><span class="p">.</span><span class="n">down</span>
 
 <span class="k">switch</span> <span class="n">direction</span> <span class="p">{</span>
-<span class="k">case</span> <span class="p">.</span><span class="n">up</span>
+<span class="k">case</span> <span class="n">Direction</span><span class="p">.</span><span class="n">up</span>
     <span class="bp">print</span><span class="p">(</span><span class="s">&quot;up&quot;</span><span class="p">)</span>
 
-<span class="k">case</span> <span class="p">.</span><span class="n">down</span>
+<span class="k">case</span> <span class="n">Direction</span><span class="p">.</span><span class="n">down</span>
     <span class="bp">print</span><span class="p">(</span><span class="s">&quot;down&quot;</span><span class="p">)</span>
 
-<span class="k">case</span> <span class="p">.</span><span class="kr">left</span>
+<span class="k">case</span> <span class="n">Direction</span><span class="p">.</span><span class="kr">left</span>
     <span class="bp">print</span><span class="p">(</span><span class="s">&quot;left&quot;</span><span class="p">)</span>
 
-<span class="k">case</span> <span class="p">.</span><span class="kr">right</span>
+<span class="k">case</span> <span class="n">Direction</span><span class="p">.</span><span class="kr">right</span>
     <span class="bp">print</span><span class="p">(</span><span class="s">&quot;right&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
@@ -560,6 +574,18 @@
 <p class="admonition-title">Note</p>
 <p>Learn more about <code>Control Flow</code> <a href="../../control-flow/">here</a>.</p>
 </div>
+<h2 id="associated-values">Associated values</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Mode</span> <span class="p">::</span> <span class="kd">enum</span><span class="p">(</span><span class="n">u8</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">indirect</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">relative</span><span class="p">,</span>
+    <span class="n">absolute</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
                 
                   
                 

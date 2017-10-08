@@ -249,6 +249,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
     
     <a href="./" title="Arrays" class="md-nav__link md-nav__link--active">
       Arrays
@@ -275,8 +277,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../enumeration/" title="Enumerations" class="md-nav__link">
-      Enumerations
+    <a href="../enumeration/" title="Enums" class="md-nav__link">
+      Enums
     </a>
   </li>
 
@@ -299,8 +301,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../struct/" title="Structures" class="md-nav__link">
-      Structures
+    <a href="../struct/" title="Structs" class="md-nav__link">
+      Structs
     </a>
   </li>
 
@@ -420,6 +422,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
 </nav>
                   </div>
@@ -434,17 +438,25 @@
                   <a href="https://github.com/kai-language/docs/edit/master/docs/types/array.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Arrays</h1>
-                
-                <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">names</span> <span class="p">:=</span> <span class="p">{</span> <span class="s">&quot;Tim&quot;</span><span class="p">,</span> <span class="s">&quot;Søren&quot;</span><span class="p">,</span> <span class="s">&quot;Jane&quot;</span> <span class="p">}</span>
-<span class="n">namesCopy</span> <span class="p">:</span> <span class="p">[]</span><span class="n">string</span> <span class="p">=</span> <span class="n">names</span>
+                <h1 id="arrays">Arrays</h1>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">names</span> <span class="p">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="n">string</span> <span class="p">{</span> <span class="s">&quot;Tim&quot;</span><span class="p">,</span> <span class="s">&quot;Søren&quot;</span><span class="p">,</span> <span class="s">&quot;Jane&quot;</span> <span class="p">}</span>
+<span class="n">namesCopy</span> <span class="p">:=</span> <span class="n">names</span>
 </pre></div>
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="bp">print</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">length</span><span class="p">)</span> <span class="c1">// 3</span>
 <span class="bp">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">// &quot;Tim&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<h1 id="dynamic-arrays">Dynamic Arrays</h1>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">names</span> <span class="p">:=</span> <span class="p">[]</span><span class="n">string</span>
+<span class="n">names</span> <span class="p">=</span> <span class="n">append</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="s">&quot;James&quot;</span><span class="p">)</span>
+<span class="bp">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">// &quot;James&quot;</span>
 </pre></div>
 </td></tr></table>
                 

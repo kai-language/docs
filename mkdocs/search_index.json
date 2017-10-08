@@ -7,7 +7,7 @@
         }, 
         {
             "location": "/", 
-            "text": "The Basics\n\n\nKai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here, \nInstall Kai\n to get started!\n\n\nGetting Started\n\n\nAs per tradition, let's start with a hello world application.\n\n\n1\nprint\n(\nHello, world!\n)\n\n\n\n\n\n\n\n\n\nWarning\n\n\nStatements in global scope are temporarily disabled. As global scope is limited to declarations, please define a \nmain\n procedure.\n\n\n\n\nUnlike many other programming languages, Kai doesn't require you to explicitly define a \nmain()\n or import any \nmodules\n to build an application.\n\n\nVariables and Constants\n\n\nVariables and constants match a name to a value (similar to \nx\n in algebra). Variables are values that are allowed to change (\nmutable\n/\nruntime\n) while constants are values that aren't allowed to change (\nimmutable\n/\ncompile-time\n).\n\n\nSimple Declarations\n\n\nThe syntax for declaring a variable is quite straightforward. Simply provide a name followed by \n:=\n and a value.\n\n\nHere's an example:\n\n\n1\nx\n \n:=\n \n15\n\n\n\n\n\n\n\nThe previous line created a variable named \nx\n and set its value to \n15\n.\n\n\nIt's also possible to declare a variable using another variable (or constant) as its value. The following example will create a variable \na\n with the value \n1\n and another variable \nb\n with the value of \na\n (also \n1\n).\n\n\n1\n2\na\n \n:=\n \n1\n\n\nb\n \n:=\n \na\n\n\n\n\n\n\n\nYou can combine the previous example into a single line.\n\n\n1\na\n,\n \nb\n \n:=\n \n1\n,\n \n1\n\n\n\n\n\n\n\nAs a variable is a mutable value, you can change its value by using the \nassignment operator\n (\n=\n)\n\n\n1\n2\nx\n \n:=\n \n0\n\n\nx\n \n=\n \n7\n\n\n\n\n\n\n\nx\n will now have the value \n7\n. Try printing it:\n\n\n1\nprint\n(\nx\n)\n\n\n\n\n\n\n\nIf you want to declare a value as a constant, you can use the \nconstant declaration operator\n (\n::\n).\n\n\n1\nseven\n \n::\n \n7\n\n\n\n\n\n\n\nSince a constant is immutable, the following code will cause an error:\n\n\n1\n2\nseven\n \n::\n \n7\n\n\nseven\n \n=\n \n2\n \n// error\n\n\n\n\n\n\n\nType Annotation\n\n\nIn most cases, the compiler is smart enough to infer the type of variable you want to use, but in certain cercumstances you may be required to give it a hint/annotation. Doing so is quite similar to a normal variable declaration.\n\n\nFirst, let's start with annotating a variable value:\n\n\n1\nage\n \n:\n \nint\n \n=\n \n23\n\n\n\n\n\n\n\nNow, a constant value:\n\n\n1\nfive\n \n:\n \nint\n \n:\n \n5\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nKai Types\n \nhere\n\n and \nCompile Time Execution\n \nhere\n.\n\n\n\n\nNaming\n\n\nVariables and constants can be named just about any unicode character other than whitespace and mathematical symbols. When a value is named, that name cannot be used again within the same \nscope\n. Names (\nidentifiers\n) cannot start with a number, but a number can be included within the name.\n\n\n1\n2\n3\n\uc774\ub984\n \n:=\n \n\ub9cc\uc138\n\n\n\ud83d\udd12\n  \n:=\n \ntrue\n\n\n\u03c4\n   \n:=\n \n6.28\n\n\n\n\n\n\n\nScope and Shadowing\n\n\nBlocks of code are organised as scopes. A scope is defined as the code in-between \n{\n and \n}\n. You are entering a scope when you see \n{\n and exiting when you see \n}\n. Variables and constants are allowed to enter a scope, but they are not allowed to leave the scope they are declared in.\n\n\nFor example:\n\n\n1\n2\n3\n4\n5\nmessage\n \n:=\n \nHello!\n\n\n\n{\n\n    \nprint\n(\nmessage\n)\n \n// Prints \nHello!\n\n\n}\n\n\n\n\n\n\n\nis allowed because \nmessage\n is going deeper in scope. But:\n\n\n1\n2\n3\n4\n5\n{\n\n    \nmessage\n \n:=\n \nHello!\n\n\n}\n\n\n\nprint\n(\nmessage\n)\n \n// Error \nUnknown identifier `message`\n\n\n\n\n\n\n\nis not allowed because \nmessage\n is not allowed to exit the scope it was declared in. When entering a new scope, you are allowed to reuse names. This feature is known as \nshadowing\n.\n\n\n1\n2\n3\n4\n5\n6\n7\naValue\n \n:=\n \n8675309\n\n\n{\n\n    \naValue\n \n:=\n \nI shadowed a value.\n\n    \nprint\n(\naValue\n)\n \n// Prints \nI shadowed a value.\n\n\n}\n\n\n\nprint\n(\naValue\n)\n \n// Prints \n8675309", 
+            "text": "The Basics\n\n\nKai is a new programming language that aims to be C with a touch of modernism. Kai is about the freedom and speed. Write code how you want, we'll stay out of your way. If you're new here, \nInstall Kai\n to get started!\n\n\nGetting Started\n\n\nAs per tradition, let's start with a hello world application.\n\n\n1\nprint\n(\nHello, world!\n)\n\n\n\n\n\n\n\n\n\nWarning\n\n\nStatements in global scope are temporarily disabled. As global scope is limited to declarations, please define a \nmain\n procedure.\n\n\n\n\nUnlike many other programming languages, Kai doesn't require you to explicitly define a \nmain()\n or import any \nmodules\n to build an application.\n\n\nVariables and Constants\n\n\nVariables and constants match a name to a value (similar to \nx\n in algebra). Variables are values that are allowed to change (\nmutable\n/\nruntime\n) while constants are values that aren't allowed to change (\nimmutable\n/\ncompile-time\n).\n\n\nSimple Declarations\n\n\nThe syntax for declaring a variable is quite straightforward. Simply provide a name followed by \n:=\n and a value.\n\n\nHere's an example:\n\n\n1\nx\n \n:=\n \n15\n\n\n\n\n\n\n\nThe previous line created a variable named \nx\n and set its value to \n15\n.\n\n\nIt's also possible to declare a variable using another variable (or constant) as its value. The following example will create a variable \na\n with the value \n1\n and another variable \nb\n with the value of \na\n (also \n1\n).\n\n\n1\n2\na\n \n:=\n \n1\n\n\nb\n \n:=\n \na\n\n\n\n\n\n\n\nYou can combine the previous example into a single line.\n\n\n1\na\n,\n \nb\n \n:=\n \n1\n,\n \n1\n\n\n\n\n\n\n\nAs a variable is a mutable value, you can change its value by using the \nassignment operator\n (\n=\n)\n\n\n1\n2\nx\n \n:=\n \n0\n\n\nx\n \n=\n \n7\n\n\n\n\n\n\n\nx\n will now have the value \n7\n. Try printing it:\n\n\n1\nprint\n(\nx\n)\n\n\n\n\n\n\n\nIf you want to declare a value as a constant, you can use the \nconstant declaration operator\n (\n::\n).\n\n\n1\nseven\n \n::\n \n7\n\n\n\n\n\n\n\nSince a constant is immutable, the following code will cause an error:\n\n\n1\n2\nseven\n \n::\n \n7\n\n\nseven\n \n=\n \n2\n \n// error\n\n\n\n\n\n\n\nType Annotation\n\n\nIn most cases, the compiler is smart enough to infer the type of variable you want to use, but in certain cercumstances you may be required to give it a hint/annotation. Doing so is quite similar to a normal variable declaration.\n\n\nFirst, let's start with annotating a variable value:\n\n\n1\nage\n \n:\n \ni64\n \n=\n \n23\n\n\n\n\n\n\n\nNow, a constant value:\n\n\n1\nfive\n \n:\n \ni64\n \n:\n \n5\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nKai Types\n \nhere\n\n and \nCompile Time Execution\n \nhere\n.\n\n\n\n\nNaming\n\n\nVariables and constants can be named just about any unicode character other than whitespace and mathematical symbols. When a value is named, that name cannot be used again within the same \nscope\n. Names (\nidentifiers\n) cannot start with a number, but a number can be included within the name.\n\n\n1\n2\n3\n\uc774\ub984\n \n:=\n \n\ub9cc\uc138\n\n\n\ud83d\udd12\n  \n:=\n \ntrue\n\n\n\u03c4\n   \n:=\n \n6.28\n\n\n\n\n\n\n\nScope and Shadowing\n\n\nBlocks of code are organised as scopes. A scope is defined as the code in-between \n{\n and \n}\n. You are entering a scope when you see \n{\n and exiting when you see \n}\n. Variables and constants are allowed to enter a scope, but they are not allowed to leave the scope they are declared in.\n\n\nFor example:\n\n\n1\n2\n3\n4\n5\nmessage\n \n:=\n \nHello!\n\n\n\n{\n\n    \nprint\n(\nmessage\n)\n \n// Prints \nHello!\n\n\n}\n\n\n\n\n\n\n\nis allowed because \nmessage\n is going deeper in scope. But:\n\n\n1\n2\n3\n4\n5\n{\n\n    \nmessage\n \n:=\n \nHello!\n\n\n}\n\n\n\nprint\n(\nmessage\n)\n \n// Error \nUnknown identifier `message`\n\n\n\n\n\n\n\nis not allowed because \nmessage\n is not allowed to exit the scope it was declared in. When entering a new scope, you are allowed to reuse names. This feature is known as \nshadowing\n.\n\n\n1\n2\n3\n4\n5\n6\n7\naValue\n \n:=\n \n8675309\n\n\n{\n\n    \naValue\n \n:=\n \nI shadowed a value.\n\n    \nprint\n(\naValue\n)\n \n// Prints \nI shadowed a value.\n\n\n}\n\n\n\nprint\n(\naValue\n)\n \n// Prints \n8675309", 
             "title": "The Basics"
         }, 
         {
@@ -32,7 +32,7 @@
         }, 
         {
             "location": "/#type-annotation", 
-            "text": "In most cases, the compiler is smart enough to infer the type of variable you want to use, but in certain cercumstances you may be required to give it a hint/annotation. Doing so is quite similar to a normal variable declaration.  First, let's start with annotating a variable value:  1 age   :   int   =   23    Now, a constant value:  1 five   :   int   :   5     Note  Learn more about  Kai Types   here \n and  Compile Time Execution   here .", 
+            "text": "In most cases, the compiler is smart enough to infer the type of variable you want to use, but in certain cercumstances you may be required to give it a hint/annotation. Doing so is quite similar to a normal variable declaration.  First, let's start with annotating a variable value:  1 age   :   i64   =   23    Now, a constant value:  1 five   :   i64   :   5     Note  Learn more about  Kai Types   here \n and  Compile Time Execution   here .", 
             "title": "Type Annotation"
         }, 
         {
@@ -47,7 +47,7 @@
         }, 
         {
             "location": "/types/basic/", 
-            "text": "Basic Types\n\n\nIntegers\n\n\n1\nx\n:\n \nint\n \n=\n \n5\n\n\n\n\n\n\n\n1\n2\nx\n:\n \nint\n \n5\n\n\ny\n:\n \ni64\n \n=\n \nx\n\n\n\n\n\n\n\n1\nz\n:\n \ni8\n \n=\n \n0\n\n\n\n\n\n\n\nReals\n\n\n1\n2\npi\n:\n \nfloat\n \n=\n \n3.14\n\n\ntau\n:\n \nf64\n \n=\n \n6.28\n\n\n\n\n\n\n\nBoolean\n\n\n1\n2\nhasValue\n \n:=\n \ntrue\n\n\ndoesNotHaveValue\n \n:=\n \nfalse\n\n\n\n\n\n\n\nStrings\n\n\n1\nname\n:\n \nstring\n \n=\n \nJohn\n\n\n\n\n\n\n\nUnconstrained Types\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\nmyproc\n \n::\n \n(\nanI32\n:\n \ni32\n)\n \n-\n \nVoid\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n// could be any integer type and will default to i64 if not constrained.\n\n\nunconstValue\n \n:=\n \n5\n\n\n\n\n\n// calling this procedure constrains the value to type i32.\n\n\nmyproc\n(\nanI32\n:\n \nunconstValue\n)", 
+            "text": "Basic Types\n\n\nIntegers\n\n\n1\nx\n:\n \nint\n \n=\n \n5\n\n\n\n\n\n\n\n1\n2\nx\n:\n \nint\n \n5\n\n\ny\n:\n \ni64\n \n=\n \nx\n\n\n\n\n\n\n\n1\nz\n:\n \ni8\n \n=\n \n0\n\n\n\n\n\n\n\nReals\n\n\n1\n2\npi\n:\n \nfloat\n \n=\n \n3.14\n\n\ntau\n:\n \nf64\n \n=\n \n6.28\n\n\n\n\n\n\n\nBoolean\n\n\n1\n2\nhasValue\n \n:=\n \ntrue\n\n\ndoesNotHaveValue\n \n:=\n \nfalse\n\n\n\n\n\n\n\nStrings\n\n\n1\nname\n:\n \nstring\n \n=\n \nJohn\n\n\n\n\n\n\n\nUnconstrained Types\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\nmyproc\n \n::\n \n(\nanI32\n:\n \ni32\n)\n \n-\n \nvoid\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n// could be any integer type and will default to i64 if not constrained.\n\n\nunconstValue\n \n:=\n \n5\n\n\n\n\n\n// calling this procedure constrains the value to type i32.\n\n\nmyproc\n(\nanI32\n:\n \nunconstValue\n)", 
             "title": "Basic Types"
         }, 
         {
@@ -77,13 +77,23 @@
         }, 
         {
             "location": "/types/basic/#unconstrained-types", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 myproc   ::   ( anI32 :   i32 )   -   Void   { \n     // ...  }  // could be any integer type and will default to i64 if not constrained.  unconstValue   :=   5   // calling this procedure constrains the value to type i32.  myproc ( anI32 :   unconstValue )", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 myproc   ::   ( anI32 :   i32 )   -   void   { \n     // ...  }  // could be any integer type and will default to i64 if not constrained.  unconstValue   :=   5   // calling this procedure constrains the value to type i32.  myproc ( anI32 :   unconstValue )", 
             "title": "Unconstrained Types"
         }, 
         {
             "location": "/types/array/", 
-            "text": "1\n2\nnames\n \n:=\n \n{\n \nTim\n,\n \nS\u00f8ren\n,\n \nJane\n \n}\n\n\nnamesCopy\n \n:\n \n[]\nstring\n \n=\n \nnames\n\n\n\n\n\n\n\n1\n2\nprint\n(\nnames\n.\nlength\n)\n \n// 3\n\n\nprint\n(\nnames\n[\n0\n])\n \n// \nTim", 
+            "text": "Arrays\n\n\n1\n2\nnames\n \n:=\n \n[\n3\n]\nstring\n \n{\n \nTim\n,\n \nS\u00f8ren\n,\n \nJane\n \n}\n\n\nnamesCopy\n \n:=\n \nnames\n\n\n\n\n\n\n\n1\n2\nprint\n(\nnames\n.\nlength\n)\n \n// 3\n\n\nprint\n(\nnames\n[\n0\n])\n \n// \nTim\n\n\n\n\n\n\n\nDynamic Arrays\n\n\n1\n2\n3\nnames\n \n:=\n \n[]\nstring\n\n\nnames\n \n=\n \nappend\n(\nnames\n,\n \nJames\n)\n\n\nprint\n(\nnames\n[\n0\n])\n \n// \nJames", 
             "title": "Arrays"
+        }, 
+        {
+            "location": "/types/array/#arrays", 
+            "text": "1\n2 names   :=   [ 3 ] string   {   Tim ,   S\u00f8ren ,   Jane   }  namesCopy   :=   names    1\n2 print ( names . length )   // 3  print ( names [ 0 ])   //  Tim", 
+            "title": "Arrays"
+        }, 
+        {
+            "location": "/types/array/#dynamic-arrays", 
+            "text": "1\n2\n3 names   :=   [] string  names   =   append ( names ,   James )  print ( names [ 0 ])   //  James", 
+            "title": "Dynamic Arrays"
         }, 
         {
             "location": "/types/pointer/", 
@@ -92,53 +102,43 @@
         }, 
         {
             "location": "/types/enumeration/", 
-            "text": "Declaration\n\n\n1\n2\n3\n4\n5\n6\nDirection\n \n::\n \nenum\n \n{\n\n    \ncase\n \nup\n\n    \ncase\n \ndown\n\n    \ncase\n \nleft\n\n    \ncase\n \nright\n\n\n}\n\n\n\n\n\n\n\nVariable Declaration\n\n\n1\ndirection\n:\n \nDirection\n \n=\n \n.\nup\n\n\n\n\n\n\n\nControl Flow\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\ndirection\n:\n \nDirection\n \n=\n \n.\ndown\n\n\n\nswitch\n \ndirection\n \n{\n\n\ncase\n \n.\nup\n\n    \nprint\n(\nup\n)\n\n\n\ncase\n \n.\ndown\n\n    \nprint\n(\ndown\n)\n\n\n\ncase\n \n.\nleft\n\n    \nprint\n(\nleft\n)\n\n\n\ncase\n \n.\nright\n\n    \nprint\n(\nright\n)\n\n\n}\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nControl Flow\n \nhere\n.", 
-            "title": "Enumerations"
+            "text": "Declaration\n\n\n1\n2\n3\n4\n5\n6\nDirection\n \n::\n \nenum\n \n{\n\n    \nup\n,\n\n    \ndown\n,\n\n    \nleft\n,\n\n    \nright\n\n\n}\n\n\n\n\n\n\n\nVariable Declaration\n\n\n1\ndirection\n \n:=\n \nDirection\n.\nup\n\n\n\n\n\n\n\nControl Flow\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\ndirection\n \n:=\n \nDirection\n.\ndown\n\n\n\nswitch\n \ndirection\n \n{\n\n\ncase\n \nDirection\n.\nup\n\n    \nprint\n(\nup\n)\n\n\n\ncase\n \nDirection\n.\ndown\n\n    \nprint\n(\ndown\n)\n\n\n\ncase\n \nDirection\n.\nleft\n\n    \nprint\n(\nleft\n)\n\n\n\ncase\n \nDirection\n.\nright\n\n    \nprint\n(\nright\n)\n\n\n}\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nControl Flow\n \nhere\n.\n\n\n\n\nAssociated values\n\n\n1\n2\n3\n4\n5\nMode\n \n::\n \nenum\n(\nu8\n)\n \n{\n\n    \nindirect\n \n=\n \n1\n,\n\n    \nrelative\n,\n\n    \nabsolute\n\n\n}", 
+            "title": "Enums"
         }, 
         {
             "location": "/types/enumeration/#declaration", 
-            "text": "1\n2\n3\n4\n5\n6 Direction   ::   enum   { \n     case   up \n     case   down \n     case   left \n     case   right  }", 
+            "text": "1\n2\n3\n4\n5\n6 Direction   ::   enum   { \n     up , \n     down , \n     left , \n     right  }", 
             "title": "Declaration"
         }, 
         {
             "location": "/types/enumeration/#variable-declaration", 
-            "text": "1 direction :   Direction   =   . up", 
+            "text": "1 direction   :=   Direction . up", 
             "title": "Variable Declaration"
         }, 
         {
             "location": "/types/enumeration/#control-flow", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15 direction :   Direction   =   . down  switch   direction   {  case   . up \n     print ( up )  case   . down \n     print ( down )  case   . left \n     print ( left )  case   . right \n     print ( right )  }     Note  Learn more about  Control Flow   here .", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15 direction   :=   Direction . down  switch   direction   {  case   Direction . up \n     print ( up )  case   Direction . down \n     print ( down )  case   Direction . left \n     print ( left )  case   Direction . right \n     print ( right )  }     Note  Learn more about  Control Flow   here .", 
             "title": "Control Flow"
         }, 
         {
+            "location": "/types/enumeration/#associated-values", 
+            "text": "1\n2\n3\n4\n5 Mode   ::   enum ( u8 )   { \n     indirect   =   1 , \n     relative , \n     absolute  }", 
+            "title": "Associated values"
+        }, 
+        {
             "location": "/types/union/", 
-            "text": "Declaration\n\n\n1\n2\n3\n4\n5\nCareer\n \n::\n \nunion\n \n{\n\n    \ncase\n \nengineer\n(\nfield\n:\n \nstring\n)\n\n    \ncase\n \naccountant\n(\nfield\n:\n \nstring\n,\n \nfavouriteNumber\n:\n \nf64\n)\n\n    \ncase\n \nnone\n\n\n}\n\n\n\n\n\n\n\nVariable Declaration\n\n\n1\nmyCareer\n:\n \nCareer\n \n=\n \n.\nengineer\n(\nfield\n:\n \nSoftware\n)\n\n\n\n\n\n\n\nComparison\n\n\n1\n2\n3\n4\nmyCareer\n:\n \nCareer\n \n=\n \n.\nengineer\n(\nfield\n:\n \nSoftware\n)\n\n\nherCareer\n:\n \nCareer\n \n=\n \n.\naccountant\n(\nfield\n:\n \nGeneral\n,\n \nfavouriteNumber\n:\n \n3.14\n)\n\n\n\nprint\n(\nmyCareer\n \n==\n \nherCareer\n)\n \n// false\n\n\n\n\n\n\n\nAssociated Values\n\n\n1\n2\n3\n4\nhisCareer\n:\n \nCareer\n \n=\n \n.\nengineer\n(\nfield\n:\n \nCivil\n)\n\n\nif\n \nhisCareer\n \n=\n \n.\nengineer\n \n{\n\n\n    \nprint\n(\nhisCareer\n.\nfield\n)\n \n// Civil\n\n\n}", 
+            "text": "Declaration\n\n\n1\n2\n3\n4\n5\nData\n \n::\n \nunion\n \n{\n\n    \ni\n:\n \ni64\n,\n\n    \nf\n:\n \nf64\n,\n\n    \ns\n:\n \nstring\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\ndata\n \n:=\n \nData\n\n\ndata\n.\nf\n \n=\n \n3.14159\n\n\nprintf\n(\ndata.f: %f\n\\n\n.\nraw\n,\n \ndata\n.\nf\n)\n\n\nprintf\n(\ndata.i: %d\n\\n\n.\nraw\n,\n \ndata\n.\ni\n)\n\n\nprintf\n(\ndata.s: %s\n\\n\n.\nraw\n,\n \ndata\n.\ns\n)\n\n\n\n\n\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\ndata\n \n:=\n \nData\n\n\n\ndata\n.\ni\n \n=\n \n100\n\n\nprintf\n(\ndata.i: %d\n\\n\n.\nraw\n,\n \ndata\n.\ni\n)\n\n\n\ndata\n.\nf\n \n=\n \n3.14159\n\n\nprintf\n(\ndata.f: %f\n\\n\n.\nraw\n,\n \ndata\n.\nf\n)\n\n\n\ndata\n.\ns\n \n=\n \nUnions!\n\n\nprintf\n(\ndata.s: %s\n\\n\n.\nraw\n,\n \ndata\n.\ns\n)", 
             "title": "Unions"
         }, 
         {
             "location": "/types/union/#declaration", 
-            "text": "1\n2\n3\n4\n5 Career   ::   union   { \n     case   engineer ( field :   string ) \n     case   accountant ( field :   string ,   favouriteNumber :   f64 ) \n     case   none  }", 
+            "text": "1\n2\n3\n4\n5 Data   ::   union   { \n     i :   i64 , \n     f :   f64 , \n     s :   string  }    1\n2\n3\n4\n5 data   :=   Data  data . f   =   3.14159  printf ( data.f: %f \\n . raw ,   data . f )  printf ( data.i: %d \\n . raw ,   data . i )  printf ( data.s: %s \\n . raw ,   data . s )     1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 data   :=   Data  data . i   =   100  printf ( data.i: %d \\n . raw ,   data . i )  data . f   =   3.14159  printf ( data.f: %f \\n . raw ,   data . f )  data . s   =   Unions!  printf ( data.s: %s \\n . raw ,   data . s )", 
             "title": "Declaration"
         }, 
         {
-            "location": "/types/union/#variable-declaration", 
-            "text": "1 myCareer :   Career   =   . engineer ( field :   Software )", 
-            "title": "Variable Declaration"
-        }, 
-        {
-            "location": "/types/union/#comparison", 
-            "text": "1\n2\n3\n4 myCareer :   Career   =   . engineer ( field :   Software )  herCareer :   Career   =   . accountant ( field :   General ,   favouriteNumber :   3.14 )  print ( myCareer   ==   herCareer )   // false", 
-            "title": "Comparison"
-        }, 
-        {
-            "location": "/types/union/#associated-values", 
-            "text": "1\n2\n3\n4 hisCareer :   Career   =   . engineer ( field :   Civil )  if   hisCareer   =   . engineer   {       print ( hisCareer . field )   // Civil  }", 
-            "title": "Associated Values"
-        }, 
-        {
             "location": "/types/struct/", 
-            "text": "Structs\n\n\nDeclaration\n\n\n1\n2\n3\n4\nPerson\n \n::\n \nstruct\n \n{\n\n    \nname\n:\n \nstring\n\n    \nage\n:\n \ni8\n\n\n}\n\n\n\n\n\n\n\nInitialisation\n\n\n1\n2\n3\n4\nme\n:\n \nPerson\n \n=\n \n{\n\n    \nname\n \n=\n \nGlenn\n,\n\n    \nage\n \n=\n \n30\n\n\n}\n\n\n\n\n\n\n\nDefault Values\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\nCar\n \n::\n \nstruct\n \n{\n\n    \nmodel\n:\n \nstring\n\n    \nmaker\n:\n \nstring\n\n    \nwheels\n:\n \ni8\n \n=\n \n4\n\n\n}\n\n\n\nmodelS\n:\n \nCar\n \n=\n \n{\n\n    \nmodel\n \n=\n \nModel S\n\n    \nmaker\n \n=\n \nTesla\n\n\n}", 
-            "title": "Structures"
+            "text": "Structs\n\n\nDeclaration\n\n\n1\n2\n3\n4\nPerson\n \n::\n \nstruct\n \n{\n\n    \nname\n:\n \nstring\n\n    \nage\n:\n \nu8\n\n\n}\n\n\n\n\n\n\n\nInitialization\n\n\n1\n2\n3\n4\nme\n \n:=\n \nPerson\n \n{\n\n    \nGlenn\n,\n\n    \n30\n\n\n}\n\n\n\n\n\n\n\nStruct initialization can be with or without argument labels. If the labels are provided, the fields can be declared in any order. For example:\n\n\n1\n2\n3\n4\nme\n \n:=\n \nPerson\n \n{\n\n    \nage\n:\n \n24\n,\n\n    \nname\n:\n \nBrett\n\n\n}", 
+            "title": "Structs"
         }, 
         {
             "location": "/types/struct/#structs", 
@@ -147,18 +147,13 @@
         }, 
         {
             "location": "/types/struct/#declaration", 
-            "text": "1\n2\n3\n4 Person   ::   struct   { \n     name :   string \n     age :   i8  }", 
+            "text": "1\n2\n3\n4 Person   ::   struct   { \n     name :   string \n     age :   u8  }", 
             "title": "Declaration"
         }, 
         {
-            "location": "/types/struct/#initialisation", 
-            "text": "1\n2\n3\n4 me :   Person   =   { \n     name   =   Glenn , \n     age   =   30  }", 
-            "title": "Initialisation"
-        }, 
-        {
-            "location": "/types/struct/#default-values", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 Car   ::   struct   { \n     model :   string \n     maker :   string \n     wheels :   i8   =   4  }  modelS :   Car   =   { \n     model   =   Model S \n     maker   =   Tesla  }", 
-            "title": "Default Values"
+            "location": "/types/struct/#initialization", 
+            "text": "1\n2\n3\n4 me   :=   Person   { \n     Glenn , \n     30  }    Struct initialization can be with or without argument labels. If the labels are provided, the fields can be declared in any order. For example:  1\n2\n3\n4 me   :=   Person   { \n     age :   24 , \n     name :   Brett  }", 
+            "title": "Initialization"
         }, 
         {
             "location": "/types/type-def/", 
@@ -172,7 +167,7 @@
         }, 
         {
             "location": "/control-flow/", 
-            "text": "If Statement\n\n\n1\n2\n3\nif\n \ntrue\n \n==\n \n1\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\nif\n \nfalse\n \n{\n\n    \n// won\nt be executed\n\n\n}\n \nelse\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\nFor Loop\n\n\n1\n2\n3\nfor\n \ni\n=\n0\n;\n \ni\n \n \n10\n;\n \ni\n++\n \n{\n\n    \n// ... runs 10 times\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\nfor\n \nchild\n \nin\n \nchildren\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nArrays\n \nhere\n.\n\n\n\n\nWhile Loop\n\n\n1\n2\n3\nwhile\n \ntrue\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\nSwitch Statement\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\nswitch\n \ngender\n \n{\n\n    \ncase\n \n.\nmale\n:\n\n        \nbreak\n\n\n    \ncase\n \n.\nfemale\n:\n\n        \nbreak\n\n\n    \ndefault\n:\n\n        \nbreak\n\n\n}\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nEnumerations\n \nhere\n.\n\n\n\n\nReturn Statement\n\n\n1\nreturn\n \n0", 
+            "text": "If Statement\n\n\n1\n2\n3\nif\n \ntrue\n \n==\n \n1\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\nif\n \nfalse\n \n{\n\n    \n// won\nt be executed\n\n\n}\n \nelse\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\nFor Loop\n\n\n1\n2\n3\nfor\n \ni\n=\n0\n;\n \ni\n \n \n10\n;\n \ni\n++\n \n{\n\n    \n// ... runs 10 times\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\nfor\n \nchild\n \nin\n \nchildren\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nArrays\n \nhere\n.\n\n\n\n\nWhile Loop\n\n\n1\n2\n3\nfor\n \ntrue\n \n{\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\nSwitch Statement\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\nswitch\n \ngender\n \n{\n\n    \ncase\n \n.\nmale\n:\n\n        \nbreak\n\n\n    \ncase\n \n.\nfemale\n:\n\n        \nbreak\n\n\n    \ncase\n:\n \n// default\n\n        \nbreak\n\n\n}\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nEnumerations\n \nhere\n.\n\n\n\n\nReturn Statement\n\n\n1\nreturn\n \n0", 
             "title": "Control Flow"
         }, 
         {
@@ -187,12 +182,12 @@
         }, 
         {
             "location": "/control-flow/#while-loop", 
-            "text": "1\n2\n3 while   true   { \n     // ...  }", 
+            "text": "1\n2\n3 for   true   { \n     // ...  }", 
             "title": "While Loop"
         }, 
         {
             "location": "/control-flow/#switch-statement", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 switch   gender   { \n     case   . male : \n         break \n\n     case   . female : \n         break \n\n     default : \n         break  }     Note  Learn more about  Enumerations   here .", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 switch   gender   { \n     case   . male : \n         break \n\n     case   . female : \n         break \n\n     case :   // default \n         break  }     Note  Learn more about  Enumerations   here .", 
             "title": "Switch Statement"
         }, 
         {
@@ -202,17 +197,17 @@
         }, 
         {
             "location": "/procedure/", 
-            "text": "1\n2\n3\nsum\n \n::\n \n(\na\n:\n \ni32\n,\n \nb\n:\n \ni32\n)\n \n-\n \ni32\n \n{\n\n    \nreturn\n \na\n \n+\n \nb\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\nmul\n \n::\n \n(\na\n,\n \nb\n:\n \ni32\n)\n \n-\n \ni32\n \n{\n\n    \nreturn\n \na\n \n*\n \nb\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\n6\nsumAndMul\n \n::\n \n(\na\n,\n \nb\n:\n \ni32\n)\n \n-\n \ni32\n,\n \ni32\n \n{\n\n    \nsum\n \n:=\n \na\n \n+\n \nb\n\n    \nprod\n \n:=\n \na\n \n*\n \nb\n\n\n    \nreturn\n \nsum\n,\n \nprod\n\n\n}", 
+            "text": "1\n2\n3\nsum\n \n::\n \n(\na\n:\n \ni32\n,\n \nb\n:\n \ni32\n)\n \n-\n \ni32\n \n{\n\n    \nreturn\n \na\n \n+\n \nb\n\n\n}\n\n\n\n\n\n\n\n\n\nTip\n\n\nJust like variable declarations, multiple parameters of the same type can be declared as a list followed by their type. Example: \nmul :: (a, b: i32) -\n i32\n\n\n\n\nKai also supports multiple returns.\n\n\n1\n2\n3\n4\n5\n6\nsumAndMul\n \n::\n \n(\na\n,\n \nb\n:\n \ni32\n)\n \n-\n \ni32\n,\n \ni32\n \n{\n\n    \nsum\n \n:=\n \na\n \n+\n \nb\n\n    \nprod\n \n:=\n \na\n \n*\n \nb\n\n\n    \nreturn\n \nsum\n,\n \nprod\n\n\n}", 
             "title": "Procedures"
         }, 
         {
             "location": "/module/", 
-            "text": "Import a File\n\n\n1\n#\nimport\n \nanother_file\n\n\n\n\n\n\n\nImport from Git\n\n\n1\n2\n3\n4\n5\n// github\n\n\n#\nimport\n \ngit\n(\nauthor/repo\n)\n\n\n\n// external\n\n\n#\nimport\n \ngit\n(\nhttps://external.com/author/repo\n)\n\n\n\n\n\n\n\nAlias an Import\n\n\n1\n2\n#\nimport\n \nmath\n \nas\n \nmathy\n\n\nprint\n(\nmathy\n.\npi\n)\n\n\n\n\n\n\n\nImport a C Header\n\n\n1\n#\nimport\n \nstdio.h\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nWorking with C\n \nhere\n.\n\n\n\n\nPre-Compiled Library\n\n\n1\n2\n// include and link against glibc\n\n\n#\nlibrary\n \n/path/to/umbrella.h\n \nglibc", 
+            "text": "Import a File\n\n\n1\n#\nimport\n \nstrings.kai\n\n\n\n\n\n\n\nImport from Git\n\n\n1\n2\n3\n4\n5\n// github\n\n\n#\nimport\n \ngit\n(\nauthor/repo\n)\n\n\n\n// external\n\n\n#\nimport\n \ngit\n(\nhttps://external.com/author/repo\n)\n\n\n\n\n\n\n\nAlias an Import\n\n\n1\n2\n#\nimport\n \nmath\n \nmathy\n\n\nprint\n(\nmathy\n.\npi\n)\n\n\n\n\n\n\n\nImport a C Header\n\n\n1\n#\nimport\n \nstdio.h\n\n\n\n\n\n\n\n\n\nNote\n\n\nLearn more about \nWorking with C\n \nhere\n.\n\n\n\n\nPre-Compiled Library\n\n\n1\n2\n// include and link against glibc\n\n\n#\nlibrary\n \n/path/to/umbrella.h\n \nglibc", 
             "title": "Import and Modules"
         }, 
         {
             "location": "/module/#import-a-file", 
-            "text": "1 # import   another_file", 
+            "text": "1 # import   strings.kai", 
             "title": "Import a File"
         }, 
         {
@@ -222,7 +217,7 @@
         }, 
         {
             "location": "/module/#alias-an-import", 
-            "text": "1\n2 # import   math   as   mathy  print ( mathy . pi )", 
+            "text": "1\n2 # import   math   mathy  print ( mathy . pi )", 
             "title": "Alias an Import"
         }, 
         {
