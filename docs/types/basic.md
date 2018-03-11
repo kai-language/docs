@@ -7,7 +7,7 @@ x: int = 5
 ```
 
 ```swift
-x: int 5
+x: int = 5
 y: i64 = x
 ```
 
